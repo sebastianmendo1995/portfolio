@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+}
+
+body{
+    position: relative;
+    margin: 0;
+    color: rgb(28, 28, 30);
+}
+
+#particle-canvas{
+    width: 100%;
+    height: 100%;
+    background-color: #f6f9fc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: 0;
+}
+
+/* #canvas1{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#ccc, #ffff);
+} */
+
+#main{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.introduction {
+    margin-left: 20px;
+    align-items: center;
+}
+
+.introduction > h2 {
+    text-align: right;
+    font-size: 2.5em;
+    justify-content: center;
+    font-family: 'Kalam', cursive;
+}
+
+#name{
+    text-align: right;
+    font-size: 1.25em;
+    top: 40%;
+    right: 0%;
+}
+
+#selfContainer {
+    padding: 10px;
+    max-width: 300px;
+}
+
+#self{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.project{
+    display: none;
+}
+
+
+.icons > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icons > ul > li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+
+.icons > ul > li > a > i {
+    color: #6772e5;
+}
+
+.icons > ul > li > a > i:hover{
+    color: rgb(233, 19, 19);
+}
+
+.self-introduction {
+    margin-top: 20px;
+    max-width: 500px;
+}
+
+.self-introduction > p {
+    text-align: justify;
+    padding: 10px 10px;
+    font-size: 25px;
+    line-height: 25px;
+    font-family: 'Kalam', cursive;
+}

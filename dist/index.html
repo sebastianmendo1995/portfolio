@@ -4,16 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/stylesheets/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Kalam:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8a25e15791.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <canvas id='canvas1'></canvas>
+    <div id='particle-canvas'>
+        <canvas id='canvas1'></canvas>
+    </div>
     <div id="main">
-        <figure id='self-picture'></figure>
-        <div class='introduction'>
-            
+        <div class="main-container">
+            <figure id='selfContainer'>
+                <img id='self' src="../assets/images/profile.png" alt="">
+            </figure>
+            <div class='introduction'>
+                <h2>Welcome | Bienvenido</h2>
+                <div id="name">My name is Sebastian Mendo</div>
+                <div class="icons">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fab fa-linkedin-in fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fab fa-angellist fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="far fa-envelope fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="self-introduction">
+                    <p>
+                        I'm a 25 years old Industrial and System Engineer turned into 
+                        a Software Enginer. I discovered my passion for coding while 
+                        I was developing automated systems for the company I used to worked. 
+                    </p>
+                    <p>
+                        Since then, I've been sharpening my skills in Ruby, Rails, Javascript, 
+                        React, Redux, Express, Node.js, MongoDB, Postgres.
+                    </p>
+                </div>
+            </div>
+            <div class='project'></div>
         </div>
-        <div class='project'></div>
     </div>
 
 
