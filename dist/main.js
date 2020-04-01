@@ -17286,18 +17286,37 @@ document.addEventListener('DOMContentLoaded', function () {
   var ctx = canvas.getContext('2d');
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  var particlesArray = []; // Create Particle Array
+  var particlesArray;
+  var mouse = {
+    x: null,
+    y: null,
+    radius: canvas.height / 80 * (canvas.width / 80)
+  };
+  window.addEventListener('mousemove', function (event) {
+    mouse.x = event.x;
+    mouse.y = event.y;
+  });
+  window.addEventListener('resize', function () {
+    canvas.width = innerHeight;
+    canvas.height = innerHeight;
+    init();
+  });
+  window.addEventListener('mouseout', function () {
+    mouse.x = undefined;
+    mouse.y = undefined;
+  }); // Create Particle Array
 
   var init = function init() {
-    var numberOfParticles = canvas.height * canvas.width / 15000;
+    particlesArray = [];
+    var numberOfParticles = canvas.height * canvas.width / 20000;
 
     for (var i = 0; i < numberOfParticles; i++) {
-      var size = Math.random() * 3 + 1;
+      var size = Math.random() * 2 + 1;
       var x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
       var y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
-      var dirX = Math.random() * 3 - 1.5;
-      var dirY = Math.random() * 3 - 1.5;
-      var color = '#1C1C1E';
+      var dirX = Math.random() * 2 - 1;
+      var dirY = Math.random() * 2 - 1;
+      var color = '#333f41';
       particlesArray.push(new Particle(x, y, dirX, dirY, size, color, canvas, ctx));
     }
   };
@@ -17311,7 +17330,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (distance < canvas.width / 10 * (canvas.height / 10)) {
           opacity = 1 - distance / 20000;
-          ctx.strokeStyle = 'rgba(140,85,31,' + opacity + ')';
+          ctx.strokeStyle = 'rgba(51,63,65,' + opacity + ')';
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -17334,7 +17353,8 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   init();
-  animate(); // Buttons handler
+  animate(); // Handle Click
+  // Buttons handler
 
   document.getElementById('button-projects').addEventListener('click', function () {
     document.querySelector('.bg-modal').style.display = 'flex';
@@ -17361,8 +17381,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 var Particle = /*#__PURE__*/function () {
   function Particle(x, y, dirX, dirY, size, color, canvas, ctx) {
-    var _this = this;
-
     _classCallCheck(this, Particle);
 
     this.x = x;
@@ -17373,24 +17391,6 @@ var Particle = /*#__PURE__*/function () {
     this.color = color;
     this.canvas = canvas;
     this.ctx = ctx;
-    this.mouse = {
-      x: null,
-      y: null,
-      radius: canvas.height / 80 * (canvas.width / 80)
-    };
-    window.addEventListener('mousemove', function (event) {
-      _this.mouse.x = event.x;
-      _this.mouse.y = event.y;
-    });
-    window.addEventListener('resize', function () {
-      _this.canvas.width = innerHeight;
-      _this.canvas.height = innerHeight;
-      _this.mouse.radius = canvas.height / 80 * (canvas.width / 80);
-    });
-    window.addEventListener('mouseout', function () {
-      _this.mouse.x = undefined;
-      _this.mouse.y = undefined;
-    });
   }
 
   _createClass(Particle, [{
@@ -17398,7 +17398,7 @@ var Particle = /*#__PURE__*/function () {
     value: function draw() {
       this.ctx.beginPath();
       this.ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-      this.ctx.fillStyle = '#8C5523';
+      this.ctx.fillStyle = this.color;
       this.ctx.fill();
     }
   }, {
@@ -17412,29 +17412,24 @@ var Particle = /*#__PURE__*/function () {
       if (this.y > this.canvas.height || this.y < 0) {
         this.dirY = -this.dirY;
       } // Check collision detection - mouse position / particle position
-
-
-      var dx = this.mouse.x - this.x;
-      var dy = this.mouse.y - this.y;
-      var distance = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
-
-      if (distance < this.mouse.radius + this.size) {
-        if (this.mouse.x < this.x && this.x < this.canvas - this.size * 5) {
-          this.x += 5;
-        }
-
-        if (this.mouse.x > this.x && this.x > this.size * 5) {
-          this.x -= 5;
-        }
-
-        if (this.mouse.y < this.y && this.y < this.canvas.height - this.size * 5) {
-          this.y += 5;
-        }
-
-        if (this.mouse.y > this.y && this.y > this.size * 5) {
-          this.y -= 5;
-        }
-      } // Move particle
+      // let dx = this.mouse.x - this.x;
+      // let dy = this.mouse.y - this.y;
+      // let distance = Math.sqrt(dx ** 2 + dy ** 2);
+      // if(distance < this.mouse.radius + this.size){
+      //     if(this.mouse.x < this.x && this.x < this.canvas - this.size * 5){
+      //         this.x += 5;
+      //     }
+      //     if(this.mouse.x > this.x && this.x > this.size * 5){
+      //         this.x -= 5;
+      //     }
+      //     if(this.mouse.y < this.y && this.y < this.canvas.height - this.size * 5){
+      //         this.y += 5;
+      //     }
+      //     if(this.mouse.y > this.y && this.y > this.size * 5){
+      //         this.y -= 5;
+      //     }
+      // }
+      // Move particle
 
 
       this.x += this.dirX;
