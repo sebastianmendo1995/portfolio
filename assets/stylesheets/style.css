@@ -155,21 +155,33 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .modal-content{
-    width: 600px;
-    height: 600px;
+    position: relative;
+    width: 900px;
     background-color: #f6f9fc;
     border-radius: 10px;
+    padding: 30px 20px;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 30px;
+    transform: rotate(45deg);
+    cursor: pointer;
 }
 
 #project-title > h2 {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.8em;
     justify-content: center;
     font-family: 'Kalam', cursive;
     margin: 20px 0;
+    text-decoration: underline;
 }
 
 .project-container {
@@ -178,6 +190,31 @@ body{
     grid-template-columns: repeat(2, 1fr);
 }
 
-.project-container > div {
-    
+.project-content{
+    align-items: center;
+    margin: 0 auto;
+}
+
+.project-content > a {
+    text-align: right;
+    margin: 0 auto;
+    color: #6772e5;
+}
+
+.project-content > a:last-child{
+    padding-left: 20px ;
+}
+
+.project-content > a:hover{
+    color: red;
+}
+
+.project-preview{
+    width: 380px;
+    height: 280px;
+}
+
+.project-preview > img {
+    width: 100%;
+    height: 90%;
 }

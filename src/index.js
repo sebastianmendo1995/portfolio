@@ -63,4 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     init();
     animate();
+
+    // Buttons handler
+    document.getElementById('button-projects').addEventListener('click', () => {
+        document.querySelector('.bg-modal').style.display = 'flex';
+    })
+
+    document.querySelector('.close').addEventListener('click', () => {
+        document.querySelector('.bg-modal').style.display = 'none';
+    })
 })
