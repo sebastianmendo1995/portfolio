@@ -39,17 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
         let numberOfParticles = (canvas.height * canvas.width) / 20000;
 
         for(let i=0; i < numberOfParticles; i++){
-            let size = (Math.random() * 2) + 1;
-            let x = (Math.random() * ((innerWidth - size * 2)-(size *2)) + size * 2);
-            let y = (Math.random() * ((innerHeight - size * 2)-(size *2)) + size * 2);
-            let dirX = Math.random() * 2 - 1;
-            let dirY = Math.random() * 2 - 1;
-            let color = '#333f41';
-
-            particlesArray.push(new Particle(x, y, dirX, dirY, size, color, canvas, ctx))
-            
+            createParticle(); 
         }
 
+    }
+
+    const createParticle = () => {
+        let size = (Math.random() * 2) + 1;
+        let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+        let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+        let dirX = Math.random() * 2 - 1;
+        let dirY = Math.random() * 2 - 1;
+        let color = '#333f41';
+
+        particlesArray.push(new Particle(x, y, dirX, dirY, size, color, canvas, ctx))
     }
 
     const connect = () => {
@@ -88,7 +91,16 @@ document.addEventListener('DOMContentLoaded', () => {
     animate();
 
     // Handle Click
-    
+    window.addEventListener('click', () => {
+        let size = (Math.random() * 2) + 1;
+        let x = mouse.x;
+        let y = mouse.y;
+        let dirX = Math.random() * 2 - 1;
+        let dirY = Math.random() * 2 - 1;
+        let color = '#333f41';
+
+        particlesArray.push(new Particle(x, y, dirX, dirY, size, color, canvas, ctx))
+    });
 
     // Buttons handler
     document.getElementById('button-projects').addEventListener('click', () => {

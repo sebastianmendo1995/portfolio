@@ -17311,14 +17311,18 @@ document.addEventListener('DOMContentLoaded', function () {
     var numberOfParticles = canvas.height * canvas.width / 20000;
 
     for (var i = 0; i < numberOfParticles; i++) {
-      var size = Math.random() * 2 + 1;
-      var x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
-      var y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
-      var dirX = Math.random() * 2 - 1;
-      var dirY = Math.random() * 2 - 1;
-      var color = '#333f41';
-      particlesArray.push(new Particle(x, y, dirX, dirY, size, color, canvas, ctx));
+      createParticle();
     }
+  };
+
+  var createParticle = function createParticle() {
+    var size = Math.random() * 2 + 1;
+    var x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
+    var y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
+    var dirX = Math.random() * 2 - 1;
+    var dirY = Math.random() * 2 - 1;
+    var color = '#333f41';
+    particlesArray.push(new Particle(x, y, dirX, dirY, size, color, canvas, ctx));
   };
 
   var connect = function connect() {
@@ -17354,7 +17358,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   init();
   animate(); // Handle Click
-  // Buttons handler
+
+  window.addEventListener('click', function () {
+    var size = Math.random() * 2 + 1;
+    var x = mouse.x;
+    var y = mouse.y;
+    var dirX = Math.random() * 2 - 1;
+    var dirY = Math.random() * 2 - 1;
+    var color = '#333f41';
+    particlesArray.push(new Particle(x, y, dirX, dirY, size, color, canvas, ctx));
+  }); // Buttons handler
 
   document.getElementById('button-projects').addEventListener('click', function () {
     document.querySelector('.bg-modal').style.display = 'flex';
