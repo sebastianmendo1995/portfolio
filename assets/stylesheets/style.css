@@ -115,6 +115,13 @@ body{
     cursor: pointer;
 }
 
+#resume {
+    font-family: 'Open Sans', sans-serif;
+    color: #50afb9;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 
 /* MODAL CSS */
 .bg-modal{
