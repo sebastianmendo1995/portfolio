@@ -17424,25 +17424,7 @@ var Particle = /*#__PURE__*/function () {
 
       if (this.y > this.canvas.height || this.y < 0) {
         this.dirY = -this.dirY;
-      } // Check collision detection - mouse position / particle position
-      // let dx = this.mouse.x - this.x;
-      // let dy = this.mouse.y - this.y;
-      // let distance = Math.sqrt(dx ** 2 + dy ** 2);
-      // if(distance < this.mouse.radius + this.size){
-      //     if(this.mouse.x < this.x && this.x < this.canvas - this.size * 5){
-      //         this.x += 5;
-      //     }
-      //     if(this.mouse.x > this.x && this.x > this.size * 5){
-      //         this.x -= 5;
-      //     }
-      //     if(this.mouse.y < this.y && this.y < this.canvas.height - this.size * 5){
-      //         this.y += 5;
-      //     }
-      //     if(this.mouse.y > this.y && this.y > this.size * 5){
-      //         this.y -= 5;
-      //     }
-      // }
-      // Move particle
+      } // Move particle
 
 
       this.x += this.dirX;

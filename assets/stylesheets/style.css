@@ -174,26 +174,40 @@ body{
     margin: 0 auto;
 }
 
-.project-content > a {
+.project-icons > div > a {
     text-align: right;
-    margin: 0 auto;
-    color: #50afb9;
+    color: #ffff;
 }
 
-.project-content > a:last-child{
-    padding-left: 20px ;
+.project-icons > div > a:last-child{
+    padding-left: 10px;
 }
 
-.project-content > a:hover{
-    color: red;
+.project-icons > div > a:hover{
+    color: rgb(38, 105, 230);
 }
 
 .project-preview{
     width: 380px;
-    height: 280px;
+    height: 300px;
 }
 
 .project-preview > img {
     width: 100%;
     height: 90%;
+}
+
+.project-icons{
+    display: flex;
+    justify-content: space-between
+}
+
+.project-icons > div {
+    display: flex;
+}
+
+.service-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
 }
