@@ -1,19 +1,14 @@
 {
+  "homepage": "http://sebastianmendo1995.github.io/portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/react-fontawesome": "^0.1.9",
-    "@paypal/react-paypal-js": "^3.0.2",
     "antd": "^4.9.1",
     "country-list": "^2.2.0",
-    "crypto-js": "^4.0.0",
     "enc": "^0.4.0",
     "firebase": "^8.1.2",
     "lodash": "^4.17.20",
-    "moment": "^2.29.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-facebook-pixel": "^1.0.4",
@@ -27,16 +22,14 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "4.0.1",
     "reactn": "^2.2.7",
-    "reqwest": "^2.0.5",
     "resize-image": "^0.1.0",
     "styled-components": "^5.2.1",
-    "titleize": "^2.1.0",
-    "url-assembler": "^2.1.1",
     "use-local-storage-state": "^6.0.0",
     "yup": "^0.28.3"
   },
   "scripts": {
-    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
@@ -54,6 +47,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "prettier": "2.1.2",
     "source-map-explorer": "^2.5.1"
   }
