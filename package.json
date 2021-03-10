@@ -1,32 +1,60 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
   "private": true,
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack --watch --mode=development"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sebastianmendo1995/portfolio.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sebastianmendo1995/portfolio/issues"
-  },
-  "homepage": "https://github.com/sebastianmendo1995/portfolio#readme",
-  "devDependencies": {
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
-  },
   "dependencies": {
-    "lodash": "^4.17.15",
-    "@babel/core": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "babel": "^6.23.0",
-    "babel-loader": "^8.0.6"
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@paypal/react-paypal-js": "^3.0.2",
+    "antd": "^4.9.1",
+    "country-list": "^2.2.0",
+    "crypto-js": "^4.0.0",
+    "enc": "^0.4.0",
+    "firebase": "^8.1.2",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-facebook-pixel": "^1.0.4",
+    "react-ga": "^3.3.0",
+    "react-gtm-module": "^2.0.11",
+    "react-hook-form": "^4.9.3",
+    "react-input-mask": "^2.0.4",
+    "react-linkify": "^1.0.0-alpha",
+    "react-responsive": "^8.0.3",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "4.0.1",
+    "reactn": "^2.2.7",
+    "reqwest": "^2.0.5",
+    "resize-image": "^0.1.0",
+    "styled-components": "^5.2.1",
+    "titleize": "^2.1.0",
+    "url-assembler": "^2.1.1",
+    "use-local-storage-state": "^6.0.0",
+    "yup": "^0.28.3"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "emulatorsOnlyFunctions": "firebase emulators:start --only functions",
+    "emulators": "firebase emulators:start --only functions,auth,firestore --import=./dataEmulator --export-on-exit"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "prettier": "2.1.2",
+    "source-map-explorer": "^2.5.1"
   }
 }
