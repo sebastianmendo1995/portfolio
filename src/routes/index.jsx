@@ -5,7 +5,7 @@ import { Home } from "../pages";
 export const Routes = (props) => {
   return (
     <Switch>
-      <Route exact path="/portfolio" render={(props_) => <Home {...props_} />} />
+      <Route exact path="/" render={(props_) => <Home {...props_} />} />
     </Switch>
   );
 };
