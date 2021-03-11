@@ -20,8 +20,9 @@ export const About = (props) => {
                 I'm a 1 year experience Software Engineer, currently working at{" "}
                 <a href="https://ebombo.com" className="link" target="_blank">
                   eBombo
-                </a>
-                . I discovered my passion for coding while I was developing
+                </a>{" "}
+                as a Full-stack Engineer. I come from an Engineering background,
+                I discovered my passion for coding while I was developing
                 automated systems for the company I used to worked.
               </p>
               <p>
@@ -115,9 +116,9 @@ const SectionAbout = styled.section`
               display: inline-block;
               padding: 5px 5px;
               overflow: hidden;
-              color: #73D8C6;
+              color: #73d8c6;
               vertical-align: bottom;
-              transition: color .3s ease-out;
+              transition: color 0.3s ease-out;
               cursor: pointer;
             }
           }
