@@ -1,11 +1,9 @@
 import React from "reactn";
 import styled from "styled-components";
-import profile from "../../assets/images/profile.png";
-import logo from "../../assets/images/logo.png";
-import { mediaQuery } from "../../styles/constants";
 import { About } from "./About";
 import { Header } from "./Header";
 import { Portfolio } from "./Portfolio";
+import { Contact } from "./Contact";
 
 export const Home = (props) => {
   return (
@@ -13,6 +11,7 @@ export const Home = (props) => {
       <Header />
       <About />
       <Portfolio />
+      <Contact />
     </HomeContainer>
   );
 };
