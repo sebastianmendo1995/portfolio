@@ -3,8 +3,25 @@ import styled from "styled-components";
 import profile from "../../assets/images/profile.png";
 import world from "../../assets/images/world.png";
 import { mediaQuery } from "../../styles/constants";
+import { object, string } from "yup";
+import { useForm } from "react-hook-form";
 
 export const Contact = (props) => {
+  const schema = object().shape({
+    name: string().required(),
+    email: string().required(),
+    message: string().required(),
+  });
+
+  const { register, handleSubmit, errors } = useForm({
+    validationSchema: schema,
+    reValidateMode: "onSubmit",
+  });
+
+  const sendMail = async (data) => {
+
+  }
+
   return (
     <ContactSection id="contact">
       <div className="content">
@@ -19,19 +36,38 @@ export const Contact = (props) => {
             </p>
           </div>
           <div className="col-9">
-            <form action="">
+            <form onSubmit={handleSubmit(sendMail)}>
               <div className="inputs-container">
                 <div className="name">
-                  <input type="text" name="name" placeholder="Name" />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    ref={register}
+                    error={errors.name}
+                  />
                 </div>
                 <div className="email">
-                  <input type="email" name="email" placeholder="Email" />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    ref={register}
+                    error={errors.email}
+                  />
                 </div>
               </div>
               <div className="message">
-                <textarea name="message" placeholder="Message" />
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  ref={register}
+                  error={errors.message}
+                />
               </div>
-              <button className="btn" htmlType="submit">Send</button>
+              <button className="btn" htmlType="submit">
+                Send
+              </button>
             </form>
           </div>
         </div>
@@ -147,7 +183,7 @@ const ContactSection = styled.section`
             height: 230px;
             padding: 20px;
           }
-          .btn{
+          .btn {
             width: 200px;
             margin-top: 20px;
           }
