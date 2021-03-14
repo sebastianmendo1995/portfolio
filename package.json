@@ -6,6 +6,7 @@
   "dependencies": {
     "antd": "^4.9.1",
     "country-list": "^2.2.0",
+    "emailjs-com": "^2.6.4",
     "enc": "^0.4.0",
     "firebase": "^8.1.2",
     "lodash": "^4.17.20",
