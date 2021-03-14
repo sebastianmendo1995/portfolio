@@ -1,10 +1,11 @@
 import React from "reactn";
 import styled from "styled-components";
-import profile from "../../assets/images/profile.png";
 import world from "../../assets/images/world.png";
 import { mediaQuery } from "../../styles/constants";
 import { object, string } from "yup";
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
+import { message } from "antd";
 
 export const Contact = (props) => {
   const schema = object().shape({
@@ -19,8 +20,20 @@ export const Contact = (props) => {
   });
 
   const sendMail = async (data) => {
+    try {
+      const result = await emailjs.sendForm(
+        "gmail",
+        "template_jpi80hl",
+        ".contact-form",
+        "user_xE94l09Hi0IZrtYNsDrtU"
+      );
 
-  }
+      message.success("Message send");
+    } catch (error) {
+      console.log(error.text);
+      message.error("Something went wrong, try again");
+    }
+  };
 
   return (
     <ContactSection id="contact">
@@ -36,7 +49,7 @@ export const Contact = (props) => {
             </p>
           </div>
           <div className="col-9">
-            <form onSubmit={handleSubmit(sendMail)}>
+            <form onSubmit={handleSubmit(sendMail)} className="contact-form">
               <div className="inputs-container">
                 <div className="name">
                   <input
@@ -65,9 +78,7 @@ export const Contact = (props) => {
                   error={errors.message}
                 />
               </div>
-              <button className="btn" htmlType="submit">
-                Send
-              </button>
+              <input className="btn" type="submit" value="Send Message" />
             </form>
           </div>
         </div>
@@ -79,10 +90,12 @@ export const Contact = (props) => {
 const ContactSection = styled.section`
   width: 100%;
   margin-top: 100px;
+
   .content {
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 15px;
+
     h4 {
       font-size: 1.2rem;
       line-height: 1.5rem;
@@ -92,6 +105,7 @@ const ContactSection = styled.section`
       margin-bottom: 10px;
       margin-left: 40px;
     }
+
     h4::before {
       content: "";
       width: 30px;
@@ -103,6 +117,7 @@ const ContactSection = styled.section`
       margin-right: 10px;
       margin-top: -1px;
     }
+
     h3 {
       font-size: 1.6rem;
       line-height: 1.8rem;
@@ -111,57 +126,69 @@ const ContactSection = styled.section`
       text-transform: uppercase;
       margin-bottom: 20px;
     }
+
     .row {
       display: block;
+
       ${mediaQuery.afterTablet} {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
       }
+
       .col-4 {
         flex: 0 0 100%;
         max-width: 100%;
         position: relative;
+
         p {
           font-size: 1rem;
           line-height: 1.6rem;
           color: #ffffff;
           font-weight: 400;
         }
+
         ${mediaQuery.afterTablet} {
           flex: 0 0 31%;
           max-width: 31%;
         }
       }
+
       .info {
         background: none;
         margin-bottom: 30px;
+
         ${mediaQuery.afterTablet} {
           background-image: url(${`${world}`});
           background-repeat: no-repeat;
           background-size: contain;
         }
       }
+
       .col-9 {
         flex: 0 0 100%;
         max-width: 100%;
         position: relative;
+
         ${mediaQuery.afterTablet} {
           flex: 0 0 65%;
           max-width: 65%;
         }
+
         form {
           .inputs-container {
             margin-bottom: 30px;
             display: grid;
             grid-template-columns: 1fr;
             grid-gap: 30px;
+
             ${mediaQuery.afterTablet} {
               grid-template-columns: repeat(2, 1fr);
             }
           }
 
-          input,
+          input[type="email"],
+          input[type="text"],
           textarea {
             background: #323c55;
             border: 2px solid #323c55;
@@ -178,11 +205,13 @@ const ContactSection = styled.section`
             resize: none;
             font-family: Arial, Helvetica, sans-serif;
           }
+
           textarea {
             border-radius: 10px;
             height: 230px;
             padding: 20px;
           }
+
           .btn {
             width: 200px;
             margin-top: 20px;

@@ -1,7 +1,5 @@
 import React from "reactn";
 import styled from "styled-components";
-import profile from "../../assets/images/profile.png";
-import { mediaQuery } from "../../styles/constants";
 import logo from "../../assets/images/logo.png";
 
 export const Header = (props) => {
@@ -21,6 +19,7 @@ export const Header = (props) => {
                 className="icon-linkedin"
                 href="https://www.linkedin.com/in/sebastian-mendo-lopez-8730b1126/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <i className="fab fa-linkedin-in fa-lg"></i>
               </a>
@@ -30,6 +29,7 @@ export const Header = (props) => {
                 className="icon-github"
                 href="https://github.com/sebastianmendo1995"
                 target="_blank"
+                rel="noreferrer"
               >
                 <i className="fab fa-github fa-lg"></i>
               </a>
@@ -39,6 +39,7 @@ export const Header = (props) => {
                 className="icon-angellist"
                 href="https://angel.co/u/sebastian-mendo-lopez"
                 target="_blank"
+                rel="noreferrer"
               >
                 <i className="fab fa-angellist fa-lg"></i>
               </a>
