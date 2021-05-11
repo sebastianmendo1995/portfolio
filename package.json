@@ -9,7 +9,7 @@
     "emailjs-com": "^2.6.4",
     "enc": "^0.4.0",
     "firebase": "^8.1.2",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-facebook-pixel": "^1.0.4",
