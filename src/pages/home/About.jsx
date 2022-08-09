@@ -1,6 +1,5 @@
 import React from "reactn";
 import styled from "styled-components";
-import profile from "../../assets/images/profile.png";
 import { mediaQuery } from "../../styles/constants";
 import resume from "../../assets/documents/resume.pdf";
 
@@ -8,36 +7,55 @@ export const About = (props) => {
   return (
     <SectionAbout>
       <div className="content">
-        <h4>About</h4>
         <h3>Who I am</h3>
         <div className="grid-container">
           <div className="left">
-            <img className="profile-img" src={profile} alt="" />
-          </div>
-          <div className="right">
             <div className="description">
               <p>
-                I'm a 1 year experience Software Engineer, currently working at{" "}
-                <a href="https://ebombo.com" className="link" target="_blank">
-                  eBombo
-                </a>{" "}
-                as a Full-stack Engineer. I come from an Engineering background,
-                I discovered my passion for coding while I was developing
-                automated systems for the company I used to worked.
+                I'm a 3 year experience Fullstack Software Engineer. I create
+                successful responsive websites that are easy to use, and built
+                with best practices. The main area of my expertise is front-end
+                development, HTML, CSS, JS, React.js, Next.js, building small
+                and medium web apps, custom plugins, features and animations.
               </p>
-              <p>
-                Since then, I've been sharpening my skills in Ruby, Rails,
-                Javascript, React, Redux, Express, Node.js, MongoDB, Postgres. I
-                welcome you to review my projects.
-              </p>
-              <a
-                className="btn w250"
-                target="_blank"
-                rel="noopener noreferrer"
-                href={resume}
-              >
-                Download Resume
-              </a>
+            </div>
+            <a
+              className="flat-button"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={resume}
+            >
+              <div>
+                <span class="bg"></span> 
+                <span class="base"></span>
+                <span class="text">Download Resume!</span>
+              </div>
+            </a>
+          </div>
+          <div className="right">
+            <div className="chart">
+              <span>Front-end</span>
+              <footer>
+                <div className="frontend"></div>
+              </footer>
+            </div>
+            <div className="chart">
+              <span>Back-end</span>
+              <footer>
+                <div className="backend"></div>
+              </footer>
+            </div>
+            <div className="chart">
+              <span>ReactJS</span>
+              <footer>
+                <div className="react"></div>
+              </footer>
+            </div>
+            <div className="chart">
+              <span>NextJs</span>
+              <footer>
+                <div className="next"></div>
+              </footer>
             </div>
           </div>
         </div>
@@ -52,74 +70,90 @@ const SectionAbout = styled.section`
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 15px;
-    h4 {
-      font-size: 1.2rem;
-      line-height: 1.5rem;
-      font-weight: 400;
-      color: #8b5fe7;
-      position: relative;
-      margin-bottom: 10px;
-      margin-left: 40px;
-    }
-    h4::before {
-      content: "";
-      width: 30px;
-      height: 2px;
-      background-color: #8b5fe7;
-      position: absolute;
-      top: 50%;
-      right: 100%;
-      margin-right: 10px;
-      margin-top: -1px;
-    }
-    h3 {
-      font-size: 1.6rem;
-      line-height: 1.8rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
+
     .grid-container {
       display: grid;
       grid-template-columns: 100%;
       grid-gap: 1rem;
       align-items: center;
       ${mediaQuery.afterTablet} {
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 0;
       }
       .left {
-        display: flex;
-        justify-content: center;
-        img {
-          width: 160px;
-          height: 160px;
-          border-radius: 50%;
+        p {
+          position: relative;
+          font-size: 1rem;
+          line-height: 1.6rem;
+          color: #ffffff;
+          font-weight: 400;
+          margin-bottom: 3rem;
+
+          .link {
+            text-decoration: none;
+            line-height: 1;
+            position: relative;
+            z-index: 0;
+            display: inline-block;
+            padding: 5px 5px;
+            overflow: hidden;
+            color: #73d8c6;
+            vertical-align: bottom;
+            transition: color 0.3s ease-out;
+            cursor: pointer;
+          }
         }
       }
       .right {
-        border-radius: 20px;
-        background-color: #323c55;
-        padding: 20px;
-        .description {
-          p {
-            font-size: 1rem;
-            line-height: 1.6rem;
-            color: #ffffff;
-            font-weight: 400;
-            .link {
-              text-decoration: none;
-              line-height: 1;
-              position: relative;
-              z-index: 0;
-              display: inline-block;
-              padding: 5px 5px;
-              overflow: hidden;
-              color: #73d8c6;
-              vertical-align: bottom;
-              transition: color 0.3s ease-out;
-              cursor: pointer;
+        .chart {
+          margin-bottom: 2rem;
+
+          span {
+            font-size: 18px;
+            font-family: "Anton";
+            margin-bottom: 7px;
+            display: block;
+            color: #fff;
+          }
+
+          footer {
+            background-color: #373737;
+            height: 2px;
+
+            .frontend {
+              width: 95%;
+              height: 100%;
+              background-color: #08fdd8;
+              -webkit-transition: width 1.3s ease-out;
+              -o-transition: width 1.3s ease-out;
+              transition: width 1.3s ease-out;
+            }
+
+            .backend {
+              background: rgb(255, 34, 83);
+              width: 75%;
+              height: 100%;
+              -webkit-transition: width 1.3s ease-out;
+              -o-transition: width 1.3s ease-out;
+              transition: width 1.3s ease-out;
+            }
+
+            .react {
+              background: rgb(210, 108, 213);
+              width: 90%;
+              height: 100%;
+              -webkit-transition: width 1.3s ease-out;
+              -o-transition: width 1.3s ease-out;
+              transition: width 1.3s ease-out;
+            }
+
+            .next {
+              background: #08fdd8;
+              width: 80%;
+              height: 100%;
+              -webkit-transition: width 1.3s ease-out;
+              -o-transition: width 1.3s ease-out;
+              transition: width 1.3s ease-out;
             }
           }
         }

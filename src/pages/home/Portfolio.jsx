@@ -11,7 +11,6 @@ export const Portfolio = (props) => {
   return (
     <PortfolioSection id="portfolio">
       <div className="content">
-        <h4>Some Projects</h4>
         <h3>Portfolio</h3>
         <div className="row">
           <div className="col-2 mbl">
@@ -99,34 +98,7 @@ const PortfolioSection = styled.section`
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 15px;
-    h4 {
-      font-size: 1.2rem;
-      line-height: 1.5rem;
-      font-weight: 400;
-      color: #8b5fe7;
-      position: relative;
-      margin-bottom: 10px;
-      margin-left: 40px;
-    }
-    h4::before {
-      content: "";
-      width: 30px;
-      height: 2px;
-      background-color: #8b5fe7;
-      position: absolute;
-      top: 50%;
-      right: 100%;
-      margin-right: 10px;
-      margin-top: -1px;
-    }
-    h3 {
-      font-size: 1.6rem;
-      line-height: 1.8rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
+
     .row {
       display: block;
       flex-wrap: wrap;
