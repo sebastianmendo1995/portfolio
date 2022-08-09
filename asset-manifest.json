@@ -1,24 +1,21 @@
 {
   "files": {
-    "main.js": "/static/js/main.26879c20.chunk.js",
+    "main.js": "/static/js/main.f9de091e.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.d0605945.js",
-    "static/css/2.ca811e83.chunk.css": "/static/css/2.ca811e83.chunk.css",
-    "static/js/2.a0a20ca8.chunk.js": "/static/js/2.a0a20ca8.chunk.js",
+    "static/css/2.a3e2e3b6.chunk.css": "/static/css/2.a3e2e3b6.chunk.css",
+    "static/js/2.77cb4629.chunk.js": "/static/js/2.77cb4629.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.a0a20ca8.chunk.js.LICENSE.txt": "/static/js/2.a0a20ca8.chunk.js.LICENSE.txt",
+    "static/js/2.77cb4629.chunk.js.LICENSE.txt": "/static/js/2.77cb4629.chunk.js.LICENSE.txt",
     "static/media/basketball.915847c8.png": "/static/media/basketball.915847c8.png",
     "static/media/chimp-casino.cdd49a41.png": "/static/media/chimp-casino.cdd49a41.png",
     "static/media/food-app.efa1cdd0.png": "/static/media/food-app.efa1cdd0.png",
-    "static/media/logo.9193354c.png": "/static/media/logo.9193354c.png",
-    "static/media/profile.2538d542.png": "/static/media/profile.2538d542.png",
-    "static/media/resume.7b5b9f42.pdf": "/static/media/resume.7b5b9f42.pdf",
-    "static/media/spaces.e91a70b6.png": "/static/media/spaces.e91a70b6.png",
-    "static/media/world.3d904dcd.png": "/static/media/world.3d904dcd.png"
+    "static/media/resume.f8b01e29.pdf": "/static/media/resume.f8b01e29.pdf",
+    "static/media/spaces.e91a70b6.png": "/static/media/spaces.e91a70b6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d0605945.js",
-    "static/css/2.ca811e83.chunk.css",
-    "static/js/2.a0a20ca8.chunk.js",
-    "static/js/main.26879c20.chunk.js"
+    "static/css/2.a3e2e3b6.chunk.css",
+    "static/js/2.77cb4629.chunk.js",
+    "static/js/main.f9de091e.chunk.js"
   ]
 }
