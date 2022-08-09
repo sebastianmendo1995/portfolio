@@ -21,6 +21,7 @@ export const Portfolio = (props) => {
                   href="https://fullstack-peerspace.herokuapp.com/#/"
                   target="_blank"
                   className="more-button"
+                  rel="noreferrer"
                 >
                   <PlusOutlined className="icon-plus" />
                 </a>
@@ -39,6 +40,7 @@ export const Portfolio = (props) => {
                   href="https://sebastianmendo1995.github.io/Basketball-Runner/dist/"
                   target="_blank"
                   className="more-button"
+                  rel="noreferrer"
                 >
                   <PlusOutlined className="icon-plus" />
                 </a>
@@ -57,6 +59,7 @@ export const Portfolio = (props) => {
                   href="http://chimp-casino.herokuapp.com/#/"
                   target="_blank"
                   className="more-button"
+                  rel="noreferrer"
                 >
                   <PlusOutlined className="icon-plus" />
                 </a>
@@ -75,6 +78,7 @@ export const Portfolio = (props) => {
                   href="https://sebastianmendo1995.github.io/food-app/dist/"
                   target="_blank"
                   className="more-button"
+                  rel="noreferrer"
                 >
                   <PlusOutlined className="icon-plus" />
                 </a>

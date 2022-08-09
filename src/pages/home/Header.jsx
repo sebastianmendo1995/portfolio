@@ -1,6 +1,5 @@
 import React from "reactn";
 import styled from "styled-components";
-import logo from "../../assets/images/logo.png";
 import { mediaQuery } from "../../styles/constants";
 
 export const Header = (props) => {
@@ -116,7 +115,6 @@ const HeaderSection = styled.section`
         list-style: none;
         margin: 0 !important;
         padding: 0 !important;
-import { mediaQuery } from '../../styles/constants/mediaQuery';
 
         li {
           float: left;
