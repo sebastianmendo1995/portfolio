@@ -1,5 +1,3 @@
 # Portfolio
 
-I'm a Full-stack Software Engineer, I came from an engineering background and decide to make from my passion a career.
-
-I now have 1 year of experiences as a Software Engineer, looking to share a little about how I decide to change my career, how I do it and how is going so far. 
+I'm a Full-stack Software Engineer, with  2+ years of experience in React.js, Javascript, TypeScript, Next.js,  Node.js, Ruby on Rails, HTML, CSS, Tailwind, Firebase, SQL
