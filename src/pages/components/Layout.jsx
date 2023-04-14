@@ -1,5 +1,4 @@
 import React from "reactn";
-import { mediaQuery } from "../../styles/constants";
 import styled from "styled-components";
 import { Footer } from "./Footer";
 

@@ -15,7 +15,7 @@ export const About = (props) => {
                 I'm a 3 year experience Fullstack Software Engineer. I create
                 successful responsive websites that are easy to use, and built
                 with best practices. The main area of my expertise is front-end
-                development, HTML, CSS, JS, React.js, Next.js, building small
+                development, HTML, CSS, JS, React.js, Next.js, Tailwind, building small
                 and medium web apps, custom plugins, features and animations.
               </p>
             </div>
