@@ -112,9 +112,9 @@ export const Contact = (props) => {
                   onClick={(e) => inputRef.current.click(e)}
                 >
                   <div>
-                    <span class="bg"></span>
-                    <span class="base"></span>
-                    <span class="text">Send message!</span>
+                    <span className="bg"></span>
+                    <span className="base"></span>
+                    <span className="text">Send message!</span>
                   </div>
                 </div>
               </div>

@@ -5,7 +5,7 @@ import resume from "../../assets/documents/resume.pdf";
 
 export const About = (props) => {
   return (
-    <SectionAbout class='about' id='about'>
+    <SectionAbout className='about' id='about'>
       <div className="content">
         <h3>Who I am</h3>
         <div className="grid-container">
@@ -26,9 +26,9 @@ export const About = (props) => {
               href={resume}
             >
               <div>
-                <span class="bg"></span> 
-                <span class="base"></span>
-                <span class="text">Download Resume!</span>
+                <span className="bg"></span> 
+                <span className="base"></span>
+                <span className="text">Download Resume!</span>
               </div>
             </a>
           </div>

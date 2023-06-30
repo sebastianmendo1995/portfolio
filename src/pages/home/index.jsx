@@ -4,8 +4,8 @@ import { About } from "./About";
 import { Header } from "./Header";
 import { Portfolio } from "./Portfolio";
 import { Contact } from "./Contact";
+import { Navbar } from './nav.jsx';
 import { mediaQuery } from "../../styles/constants";
-import {Navbar} from './nav.jsx';
 
 export const Home = (props) => {
   return (
