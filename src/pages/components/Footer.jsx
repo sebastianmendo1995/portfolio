@@ -5,7 +5,9 @@ export const Footer = (props) => {
   return (
     <FooterContainer>
       <div className="content-footer">
-        <div className="text">Sebastian Mendo Lopez</div>
+        <div className="text">
+          Sebastian Mendo Lopez
+        </div>
       </div>
     </FooterContainer>
   );
@@ -13,15 +15,15 @@ export const Footer = (props) => {
 
 const FooterContainer = styled.div`
   width: 100%;
-  padding-top: 100px;
-  background: #1d1d1d;
+  margin-top: 100px;
+  background: #f9f9f9;
 
   .content-footer {
-    border-top: 2px solid #08fdd8;
+    border-top: 2px solid #004E77;
     padding: 30px 15px;
     .text {
       text-align: center;
-      color: #ffffff;
+      color: #002147;
     }
   }
 `;

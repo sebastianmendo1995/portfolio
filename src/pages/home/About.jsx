@@ -27,7 +27,7 @@ export const About = (props) => {
             <p>
               With 3 years experiences as a Software Engineer, I possess an impressive arsenal of skills different technologies as JavaScript, React, Node.js, Rails, Firebase, Google Cloud, Tailwindcss, CSS, HTML. I've successful create responsive websites that were built with best practices and a smooth user experience. My expertise lies in crafting dynamic, engaging interfaces through writing clean and optimized code, utilizing cutting-edge development tools and techniques. I am also a team player who thrives in collaborating with cross-functional teams to produce outstanding web applications.
             </p>
-            <button className="submit" role="button" onClick={e => { downloadResume(e)}}>
+            <button className="submit" onClick={e => { downloadResume(e)}}>
               <span className="text">Download Resume</span>
             </button>
           </div>
@@ -40,11 +40,13 @@ export const About = (props) => {
 };
 
 const SectionAbout = styled.section`
-  padding: 8rem 0;
+  padding: 4rem 0;
   background-color: #fff;
-
+  
   ${mediaQuery.afterTablet}{
-    padding: 15rem 0;
+    max-width: 1500px;
+    padding: 8rem 0;
+    margin: 0 auto;
   }
 
   .container {
@@ -119,4 +121,8 @@ const CustomDiv = styled.div`
   width: full;
   height: 300px;
   border-radius: 1.7rem;
+
+  ${mediaQuery.afterTablet}{
+    height: 400px;
+  }
 `

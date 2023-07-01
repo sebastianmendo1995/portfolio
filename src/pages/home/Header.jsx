@@ -278,6 +278,7 @@ const HomeSection = styled.section`
           img{
             width:100%;
             height: 100%;
+            max-width: 500px;
             border-radius: 50%;
             animation: floatImage 4s ease-in-out infinite;
           }
