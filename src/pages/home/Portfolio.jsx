@@ -22,7 +22,7 @@ export const Portfolio = (props) => {
             </div>
             <div className="pro__text">
               <h2>Spaces</h2>
-              <p>Spaces rental website is an online platform that allows users to rent spaces for personal or business use. The website provides an interface for searching, comparing, and reserving places.</p>
+              <p>This website is an online platform that allows users to rent spaces for personal or business use. The website provides an interface for searching, comparing, and reserving places.</p>
               <div className="stack">
                 <p>React</p>
                 <p>Rails</p>
@@ -30,10 +30,10 @@ export const Portfolio = (props) => {
                 <p>PostgresSQL</p>
               </div>
               <div className="links">
-                <a target="_blank" href="" rel="noreferrer">
+                <a target="_blank" href="https://github.com/sebastianmendo1995/fullstack" rel="noreferrer">
                   Code <GithubOutlined />
                 </a>
-                <a target="_blank" href="https://github.com/sebastianmendo1995/fullstack" rel="noreferrer">
+                <a target="_blank" href="" rel="noreferrer">
                   Live Demo<LinkOutlined />
                 </a>
               </div>
@@ -42,7 +42,7 @@ export const Portfolio = (props) => {
 
           <div className="pro pro__1 reversed-proj">
             <div className="pro__img">
-              <a target="_blank" href="" rel="noreferrer">
+              <a target="_blank" href="https://sebastianmendo1995.github.io/Basketball-Runner/dist/" rel="noreferrer">
                 <img src={basketballImg} alt="website" />
               </a>
             </div>
@@ -57,10 +57,10 @@ export const Portfolio = (props) => {
                 <p>Canvas</p>
               </div>
               <div className="links">
-                <a target="_blank" href="" rel="noreferrer">
+                <a target="_blank" href="https://github.com/sebastianmendo1995/Basketball-Runner" rel="noreferrer">
                   Code <GithubOutlined />
                 </a>
-                <a target="_blank" href="https://github.com/sebastianmendo1995/Basketball-Runner" rel="noreferrer">
+                <a target="_blank" href="https://sebastianmendo1995.github.io/Basketball-Runner/dist/" rel="noreferrer">
                   Live Demo<LinkOutlined />
                 </a>
               </div>
@@ -85,10 +85,10 @@ export const Portfolio = (props) => {
                 <p>Node.js</p>
               </div>
               <div className="links">
-                <a target="_blank" href="" rel="noreferrer">
+                <a target="_blank" href="https://github.com/sebastianmendo1995/fullstack" rel="noreferrer">
                   Code <GithubOutlined />
                 </a>
-                <a target="_blank" href="https://github.com/sebastianmendo1995/fullstack" rel="noreferrer">
+                <a target="_blank" href="" rel="noreferrer">
                   Live Demo<LinkOutlined />
                 </a>
               </div>
@@ -97,7 +97,7 @@ export const Portfolio = (props) => {
 
           <div className="pro pro__1 reversed-proj">
             <div className="pro__img">
-              <a target="_blank" href="" rel="noreferrer">
+              <a target="_blank" href="https://sebastianmendo1995.github.io/food-app/dist/" rel="noreferrer">
                 <img src={foodImg} alt="website" />
               </a>
             </div>
@@ -113,10 +113,10 @@ export const Portfolio = (props) => {
                 <p>CSS</p>
               </div>
               <div className="links">
-                <a target="_blank" href="" rel="noreferrer">
+                <a target="_blank" href="https://github.com/sebastianmendo1995/fullstack" rel="noreferrer">
                   Code <GithubOutlined />
                 </a>
-                <a target="_blank" href="https://github.com/sebastianmendo1995/fullstack" rel="noreferrer">
+                <a target="_blank" href="https://sebastianmendo1995.github.io/food-app/dist/" rel="noreferrer">
                   Live Demo<LinkOutlined />
                 </a>
               </div>
@@ -144,11 +144,10 @@ const PortfolioSection = styled.section`
 
     h3{
       display: block;
-      font-size: 1.17em;
       margin-block-start: 1em;
       margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
       font-weight: bold;
       color: #007E91;
       font-size: 1.7rem;

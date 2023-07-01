@@ -4,7 +4,7 @@ import { mediaQuery } from "../../styles/constants";
 import resume from "../../assets/documents/resume.pdf";
 import setup from "../../assets/images/setup/setup-dark.jpeg";
 
-export const About = (props) => {
+export const About = () => {
 
   const downloadResume = (e) => {
     e.preventDefault();
@@ -33,8 +33,6 @@ export const About = (props) => {
           </div>
         </div>
       </div>
-
-    
     </SectionAbout>
   );
 };
@@ -76,11 +74,10 @@ const SectionAbout = styled.section`
     .text-side {
       h3{
         display: block;
-        font-size: 1.17em;
         margin-block-start: 1em;
         margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
         font-weight: bold;
         color: #007E91;
         font-size: 1.7rem;
@@ -118,11 +115,14 @@ const CustomDiv = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: full;
+  width: 100%;
   height: 300px;
   border-radius: 1.7rem;
-
+  max-width: 430px;
+  margin: 0 auto;
+  
   ${mediaQuery.afterTablet}{
     height: 400px;
+    max-width: 750px;
   }
 `
