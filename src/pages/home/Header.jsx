@@ -96,12 +96,14 @@ const HomeSection = styled.section`
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   position: relative;
   width: 100%;
   margin-top: 70px;
+  height: 100%;
 
   ${mediaQuery.afterTablet}{
+    height: 100vh;
+    max-height: 900px;
     padding: 0;
   }
 
@@ -120,11 +122,7 @@ const HomeSection = styled.section`
       flex-direction: column;
       justify-content: center;
       gap: 5rem;
-      padding: 2rem;
-
-      ${mediaQuery.afterTablet}{
-        padding: 0;
-      }
+      padding: 2rem 0;
 
       .skills{
         display: flex;
