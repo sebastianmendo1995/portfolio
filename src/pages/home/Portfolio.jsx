@@ -9,7 +9,7 @@ import { GithubOutlined, LinkOutlined } from "@ant-design/icons";
 
 export const Portfolio = (props) => {
   return (
-    <PortfolioSection id="portfolio">
+    <PortfolioSection id="projects">
       <div className="content">
         <h3>Portfolio</h3>
         <div className="projects-grid">
