@@ -22,7 +22,7 @@ export const Portfolio = (props) => {
             </div>
             <div className="pro__text">
               <h2>Spaces</h2>
-              <p>This website is an online platform that allows users to rent spaces for personal or business use. The website provides an interface for searching, comparing, and reserving places.</p>
+              <p>Online platform that allows users to rent spaces. The website provides an interface for searching, comparing, and reserving places.</p>
               <div className="stack">
                 <p>React</p>
                 <p>Rails</p>
@@ -76,7 +76,7 @@ export const Portfolio = (props) => {
             <div className="pro__text">
               <h2>Chimp Casino</h2>
               <p>
-                Chimp casino is a casino game that allows users to play different casino games and interact with other users.
+                Casino game that allows users to play different casino games and interact with other users.
               </p>
               <div className="stack">
                 <p>React</p>
@@ -234,7 +234,7 @@ const PortfolioSection = styled.section`
           display: flex;
           gap: 1rem;
           justify-content: space-evenly;
-          margin-top: 3rem;
+          margin-top: 1rem;
 
           a {
             color: #2d2e32;
