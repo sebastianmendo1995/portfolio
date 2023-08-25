@@ -5,7 +5,50 @@ import spacesImg from "../../assets/images/spaces.png";
 import basketballImg from "../../assets/images/basketball.png";
 import casinoImg from "../../assets/images/chimp-casino.png";
 import foodImg from "../../assets/images/food-app.png";
+import californiaImg from "../../assets/images/california.png";
 import { GithubOutlined, LinkOutlined } from "@ant-design/icons";
+
+const projects  = [
+  {
+    title: 'Hotel (Comming Soon)',
+    description: 'Real Hotel platform that is gonna allow users to make reservations, show the facilities with a clean modern design',
+    techs: ['React', 'Next.js 13', 'Firebase'],
+    cover: californiaImg
+  },
+  {
+    title: 'Spaces',
+    description: 'Online platform that allows users to rent spaces. The website provides an interface for searching, comparing, and reserving places.',
+    techs: ['React', 'Rails', 'MongoDB', 'PostgreSQL'],
+    github: 'https://github.com/sebastianmendo1995/fullstack',
+    demo: 'https://fullstack-peerspace.herokuapp.com/#/',
+    cover: spacesImg
+  },
+  {
+    title: 'Basketball Runner',
+    description: 'With a focus on simplicity and focus on user experience while gaming. This project allows user to keep track of their high score and compare it to the highest scores of other players.',
+    techs: ['Javascript', 'Webpack', 'Canvas'],
+    github: 'https://github.com/sebastianmendo1995/Basketball-Runner',
+    demo: 'https://sebastianmendo1995.github.io/Basketball-Runner/dist/',
+    cover: basketballImg
+  },
+  {
+    title: 'Food Recipe',
+    description: 'Integrated API to get all recipes for the different dishes.\n' +
+        'Implement shopping car for ingredients.',
+    techs: ['Vanilla Javascript', 'Webpack', 'Free food API'],
+    github: 'https://github.com/sebastianmendo1995/food-app',
+    demo: 'https://sebastianmendo1995.github.io/food-app/dist/',
+    cover: foodImg
+  },
+  {
+    title: 'Chimp (Team Project)',
+    description: 'Casino game that allows users to play different games and interact with other users.',
+    techs: ['React', 'Express', 'MongoDB', 'Node.js'],
+    github: 'https://github.com/samisherif95/Chimp-Casino',
+    demo: 'http://chimp-casino.herokuapp.com/#/',
+    cover: casinoImg
+  }
+]
 
 export const Portfolio = (props) => {
   return (
@@ -13,115 +56,40 @@ export const Portfolio = (props) => {
       <div className="content">
         <h3>Portfolio</h3>
         <div className="projects-grid">
-
-          <div className="pro pro__1 ">
-            <div className="pro__img">
-              <a target="_blank" href="" rel="noreferrer">
-                <img src={spacesImg} alt="website" />
-              </a>
-            </div>
-            <div className="pro__text">
-              <h2>Spaces</h2>
-              <p>Online platform that allows users to rent spaces. The website provides an interface for searching, comparing, and reserving places.</p>
-              <div className="stack">
-                <p>React</p>
-                <p>Rails</p>
-                <p>MongoDB</p>
-                <p>PostgresSQL</p>
-              </div>
-              <div className="links">
-                <a target="_blank" href="https://github.com/sebastianmendo1995/fullstack" rel="noreferrer">
-                  Code <GithubOutlined />
-                </a>
-                <a target="_blank" href="" rel="noreferrer">
-                  Live Demo<LinkOutlined />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="pro pro__1 reversed-proj">
-            <div className="pro__img">
-              <a target="_blank" href="https://sebastianmendo1995.github.io/Basketball-Runner/dist/" rel="noreferrer">
-                <img src={basketballImg} alt="website" />
-              </a>
-            </div>
-            <div className="pro__text">
-              <h2>Basketball Runner</h2>
-              <p>
-                With a focus on simplicity and focus on user experience while gaming. This project allows user to keep track of their high score and compare it to the highest scores of other players.
-              </p>
-              <div className="stack">
-                <p>Javascript</p>
-                <p>Webpack</p>
-                <p>Canvas</p>
-              </div>
-              <div className="links">
-                <a target="_blank" href="https://github.com/sebastianmendo1995/Basketball-Runner" rel="noreferrer">
-                  Code <GithubOutlined />
-                </a>
-                <a target="_blank" href="https://sebastianmendo1995.github.io/Basketball-Runner/dist/" rel="noreferrer">
-                  Live Demo<LinkOutlined />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="pro pro__1">
-            <div className="pro__img">
-              <a target="_blank" href="" rel="noreferrer">
-                <img src={casinoImg} alt="website" />
-              </a>
-            </div>
-            <div className="pro__text">
-              <h2>Chimp Casino</h2>
-              <p>
-                Casino game that allows users to play different casino games and interact with other users.
-              </p>
-              <div className="stack">
-                <p>React</p>
-                <p>MongoDB</p>
-                <p>Express</p>
-                <p>Node.js</p>
-              </div>
-              <div className="links">
-                <a target="_blank" href="https://github.com/sebastianmendo1995/fullstack" rel="noreferrer">
-                  Code <GithubOutlined />
-                </a>
-                <a target="_blank" href="" rel="noreferrer">
-                  Live Demo<LinkOutlined />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="pro pro__1 reversed-proj">
-            <div className="pro__img">
-              <a target="_blank" href="https://sebastianmendo1995.github.io/food-app/dist/" rel="noreferrer">
-                <img src={foodImg} alt="website" />
-              </a>
-            </div>
-            <div className="pro__text">
-              <h2>Food Recipe</h2>
-              <p>
-                Integrated API to get all recipes for the different dishes.
-                Implement shopping car for ingredients.
-              </p>
-              <div className="stack">
-                <p>Vanilla Javascript</p>
-                <p>Webpack</p>
-                <p>CSS</p>
-              </div>
-              <div className="links">
-                <a target="_blank" href="https://github.com/sebastianmendo1995/fullstack" rel="noreferrer">
-                  Code <GithubOutlined />
-                </a>
-                <a target="_blank" href="https://sebastianmendo1995.github.io/food-app/dist/" rel="noreferrer">
-                  Live Demo<LinkOutlined />
-                </a>
-              </div>
-            </div>
-          </div>
+          {
+            projects.map((project, idx) => (
+                <div className={`pro pro__1 ${idx % 2 !== 0 ? 'reversed-proj' : ''}`} key={project.name}>
+                  <div className="pro__img">
+                    <a target="_blank" href="" rel="noreferrer">
+                      <img src={project.cover} alt="website" />
+                    </a>
+                  </div>
+                  <div className="pro__text">
+                    <h2>{project.title}</h2>
+                    <p>{project.description}</p>
+                    <div className="stack">
+                      { project.techs.map((tech, index) => (<p key={index}>{tech}</p>)) }
+                    </div>
+                    {
+                      project.github && project.demo ? (
+                        <div className="links">
+                          <a target="_blank" href={project.github} rel="noreferrer">
+                            Code <GithubOutlined />
+                          </a>
+                          <a target="_blank" href={project.demo} rel="noreferrer">
+                            Live Demo<LinkOutlined />
+                          </a>
+                        </div>
+                      ) : (
+                        <div className='links'>
+                          <p>Private Repository</p>
+                        </div>
+                      )
+                    }
+                  </div>
+                </div>
+            ))
+          }
         </div>
       </div>
     </PortfolioSection>
