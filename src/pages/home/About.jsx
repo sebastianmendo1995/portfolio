@@ -2,61 +2,34 @@ import React from "reactn";
 import styled from "styled-components";
 import { mediaQuery } from "../../styles/constants";
 import resume from "../../assets/documents/resume.pdf";
+import setup from "../../assets/images/setup/setup-dark.jpeg";
 
-export const About = (props) => {
+export const About = () => {
+
+  const downloadResume = (e) => {
+    e.preventDefault();
+
+    const a = document.createElement('a')
+    a.href = resume
+    a.download = resume.split('/').pop()
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+  }
+
   return (
-    <SectionAbout>
-      <div className="content">
-        <h3>Who I am</h3>
-        <div className="grid-container">
-          <div className="left">
-            <div className="description">
-              <p>
-                I'm a 3 year experience Fullstack Software Engineer. I create
-                successful responsive websites that are easy to use, and built
-                with best practices. The main area of my expertise is front-end
-                development, HTML, CSS, JS, React.js, Next.js, Tailwind, building small
-                and medium web apps, custom plugins, features and animations.
-              </p>
-            </div>
-            <a
-              className="flat-button"
-              target="_blank"
-              rel="noopener noreferrer"
-              href={resume}
-            >
-              <div>
-                <span class="bg"></span> 
-                <span class="base"></span>
-                <span class="text">Download Resume!</span>
-              </div>
-            </a>
-          </div>
-          <div className="right">
-            <div className="chart">
-              <span>Front-end</span>
-              <footer>
-                <div className="frontend"></div>
-              </footer>
-            </div>
-            <div className="chart">
-              <span>Back-end</span>
-              <footer>
-                <div className="backend"></div>
-              </footer>
-            </div>
-            <div className="chart">
-              <span>ReactJS</span>
-              <footer>
-                <div className="react"></div>
-              </footer>
-            </div>
-            <div className="chart">
-              <span>NextJs</span>
-              <footer>
-                <div className="next"></div>
-              </footer>
-            </div>
+    <SectionAbout className='about' id='about'>
+      <div className="container">
+        <div className="about-content">
+          <CustomDiv className="img-side" src={setup}></CustomDiv>
+          <div className="text-side">
+            <h3>About me</h3>
+            <p>
+              With 3 years experiences as a Software Engineer, I possess an impressive arsenal of skills different technologies as JavaScript, React, Node.js, Rails, Firebase, Google Cloud, Tailwindcss, CSS, HTML. I've successful create responsive websites that were built with best practices and a smooth user experience. My expertise lies in crafting dynamic, engaging interfaces through writing clean and optimized code, utilizing cutting-edge development tools and techniques. I am also a team player who thrives in collaborating with cross-functional teams to produce outstanding web applications.
+            </p>
+            <button className="submit" onClick={e => { downloadResume(e)}}>
+              <span className="text">Download Resume</span>
+            </button>
           </div>
         </div>
       </div>
@@ -65,99 +38,91 @@ export const About = (props) => {
 };
 
 const SectionAbout = styled.section`
-  margin-top: 100px;
-  .content {
-    max-width: 1140px;
+  padding: 4rem 0;
+  background-color: #fff;
+  
+  ${mediaQuery.afterTablet}{
+    max-width: 1500px;
+    padding: 8rem 0;
     margin: 0 auto;
-    padding: 0 15px;
+  }
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: 100%;
-      grid-gap: 1rem;
-      align-items: center;
-      ${mediaQuery.afterTablet} {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0;
+  .container {
+    margin: 0 auto;
+    padding: 0 1.7rem;
+    width: 100%;
+
+    ${mediaQuery.afterTablet}{
+      padding: 0 4rem;
+    }
+  }
+
+     
+  .about-content {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-content: center;
+    gap: 2rem;
+    
+    ${mediaQuery.afterTablet}{
+      text-align: justify;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .text-side {
+      h3{
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        font-weight: bold;
+        color: #007E91;
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
       }
-      .left {
-        p {
-          position: relative;
-          font-size: 1rem;
-          line-height: 1.6rem;
-          color: #ffffff;
-          font-weight: 400;
-          margin-bottom: 3rem;
 
-          .link {
-            text-decoration: none;
-            line-height: 1;
-            position: relative;
-            z-index: 0;
-            display: inline-block;
-            padding: 5px 5px;
-            overflow: hidden;
-            color: #73d8c6;
-            vertical-align: bottom;
-            transition: color 0.3s ease-out;
-            cursor: pointer;
-          }
+      p {
+        color: #767676;
+        font-family: Mulish,sans-serif;
+        font-size: 1.1rem;
+        font-weight: 500;
+        line-height: 1.5;
+
+        ${mediaQuery.afterTablet}{
+          font-size: 1.5rem;
         }
       }
-      .right {
-        .chart {
-          margin-bottom: 2rem;
+      
+      .submit{
+        margin: 0 auto;
 
-          span {
-            font-size: 18px;
-            font-family: "Anton";
-            margin-bottom: 7px;
-            display: block;
-            color: #fff;
-          }
-
-          footer {
-            background-color: #373737;
-            height: 2px;
-
-            .frontend {
-              width: 95%;
-              height: 100%;
-              background-color: #08fdd8;
-              -webkit-transition: width 1.3s ease-out;
-              -o-transition: width 1.3s ease-out;
-              transition: width 1.3s ease-out;
-            }
-
-            .backend {
-              background: rgb(255, 34, 83);
-              width: 75%;
-              height: 100%;
-              -webkit-transition: width 1.3s ease-out;
-              -o-transition: width 1.3s ease-out;
-              transition: width 1.3s ease-out;
-            }
-
-            .react {
-              background: rgb(210, 108, 213);
-              width: 90%;
-              height: 100%;
-              -webkit-transition: width 1.3s ease-out;
-              -o-transition: width 1.3s ease-out;
-              transition: width 1.3s ease-out;
-            }
-
-            .next {
-              background: #08fdd8;
-              width: 80%;
-              height: 100%;
-              -webkit-transition: width 1.3s ease-out;
-              -o-transition: width 1.3s ease-out;
-              transition: width 1.3s ease-out;
-            }
-          }
+        ${mediaQuery.afterTablet}{
+          margin: 0;
         }
       }
     }
   }
+
+  
 `;
+
+const CustomDiv = styled.div`
+  background-image: url("${props => props.src}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  border-radius: 1.7rem;
+  max-width: 430px;
+  margin: 0 auto;
+  
+  ${mediaQuery.afterTablet}{
+    height: 400px;
+    max-width: 750px;
+  }
+`

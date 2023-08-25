@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "reactn";
+import React, { useState } from "reactn";
 import styled from "styled-components";
 import { mediaQuery } from "../../styles/constants";
 import emailjs from "emailjs-com";
@@ -6,8 +6,6 @@ import { message as AntMessage } from "antd";
 import isEmpty from "lodash/isEmpty";
 
 export const Contact = (props) => {
-  const inputRef = useRef(null);
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -105,18 +103,9 @@ export const Contact = (props) => {
                 />
               </div>
               <div className="form-button">
-                <input className="hidden" type="submit" ref={inputRef} />
-                <div
-                  id="submit-form"
-                  className="flat-button"
-                  onClick={(e) => inputRef.current.click(e)}
-                >
-                  <div>
-                    <span class="bg"></span>
-                    <span class="base"></span>
-                    <span class="text">Send message!</span>
-                  </div>
-                </div>
+                <button className="submit" htmltype="submit">
+                  <span className="text">Send message!</span>
+                </button>
               </div>
             </form>
           </div>
@@ -128,7 +117,12 @@ export const Contact = (props) => {
 
 const ContactSection = styled.section`
   width: 100%;
-  margin-top: 100px;
+  padding: 3rem 0;
+
+  ${mediaQuery.afterTablet}{
+    max-width: 1500px;
+    margin: 0 auto;
+  }
 
   .hidden {
     opacity: 0;
@@ -141,6 +135,21 @@ const ContactSection = styled.section`
   .form-button {
     display: flex;
     justify-content: flex-end;
+  }
+
+  h3{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: #007E91;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: center;
   }
 
   .content {
@@ -165,9 +174,10 @@ const ContactSection = styled.section`
         p {
           font-size: 1rem;
           line-height: 1.6rem;
-          color: #ffffff;
+          color: #2b2b2b;
           font-weight: 400;
           position: relative;
+          text-align: center;
         }
 
         ${mediaQuery.afterTablet} {
@@ -180,7 +190,7 @@ const ContactSection = styled.section`
         flex: 0 0 100%;
         max-width: 100%;
         position: relative;
-        margin-top: 4rem;
+        margin-top: 2rem;
 
         ${mediaQuery.afterTablet} {
           flex: 0 0 65%;
@@ -210,35 +220,33 @@ const ContactSection = styled.section`
           input[type="text"],
           textarea {
             width: 100%;
-            border: 0;
-            background: #2b2b2b;
             height: 50px;
             font-size: 16px;
-            color: #8d8d8d;
             padding: 0 20px;
             box-sizing: border-box;
             display: block;
             outline: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 400;
             resize: none;
-            font-family: Arial, Helvetica, sans-serif;
+            background: transparent;
+            color: #2b2b2b;
+            border-color: #002147;
+            border-width: 2px;
+            border-radius: 1rem;
           }
 
           textarea {
+            padding: 20px;
             width: 100%;
-            border: 0;
-            background: #2b2b2b;
             height: 50px;
             font-size: 16px;
-            color: #8d8d8d;
-            padding: 20px;
+            border-width: 2px;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             min-height: 150px;
             height: 230px;
-            padding: 20px;
-            font-size: 1.2rem;
+            margin-bottom: 1rem;
           }
         }
       }
