@@ -3,18 +3,12 @@ import styled from "styled-components";
 import { mediaQuery } from "../../styles/constants";
 import spacesImg from "../../assets/images/spaces.png";
 import basketballImg from "../../assets/images/basketball.png";
-import casinoImg from "../../assets/images/chimp-casino.png";
-import foodImg from "../../assets/images/food-app.png";
-import californiaImg from "../../assets/images/california.png";
 import { GithubOutlined, LinkOutlined } from "@ant-design/icons";
+// import casinoImg from "../../assets/images/chimp-casino.png";
+// import foodImg from "../../assets/images/food-app.png";
+// import californiaImg from "../../assets/images/california.png";
 
 const projects  = [
-  {
-    title: 'Hotel (Comming Soon)',
-    description: 'Real Hotel platform that is gonna allow users to make reservations, show the facilities with a clean modern design',
-    techs: ['React', 'Next.js 13', 'Firebase'],
-    cover: californiaImg
-  },
   {
     title: 'Spaces',
     description: 'Online platform that allows users to rent spaces. The website provides an interface for searching, comparing, and reserving places.',
@@ -31,23 +25,15 @@ const projects  = [
     demo: 'https://sebastianmendo1995.github.io/Basketball-Runner/dist/',
     cover: basketballImg
   },
-  {
-    title: 'Food Recipe',
-    description: 'Integrated API to get all recipes for the different dishes.\n' +
-        'Implement shopping car for ingredients.',
-    techs: ['Vanilla Javascript', 'Webpack', 'Free food API'],
-    github: 'https://github.com/sebastianmendo1995/food-app',
-    demo: 'https://sebastianmendo1995.github.io/food-app/dist/',
-    cover: foodImg
-  },
-  {
-    title: 'Chimp (Team Project)',
-    description: 'Casino game that allows users to play different games and interact with other users.',
-    techs: ['React', 'Express', 'MongoDB', 'Node.js'],
-    github: 'https://github.com/samisherif95/Chimp-Casino',
-    demo: 'http://chimp-casino.herokuapp.com/#/',
-    cover: casinoImg
-  }
+  // {
+  //   title: 'Food Recipe',
+  //   description: 'Integrated API to get all recipes for the different dishes.\n' +
+  //       'Implement shopping car for ingredients.',
+  //   techs: ['Vanilla Javascript', 'Webpack', 'Free food API'],
+  //   github: 'https://github.com/sebastianmendo1995/food-app',
+  //   demo: 'https://sebastianmendo1995.github.io/food-app/dist/',
+  //   cover: foodImg
+  // },
 ]
 
 export const Portfolio = (props) => {
