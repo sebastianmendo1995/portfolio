@@ -38,7 +38,7 @@ export const Header = (props) => {
                   />
                 </span>
               </h3>
-              <p>I'm a passionate developer based in Lima, Peru. 📍</p>
+              <p>Building High-Performance, User-Friendly Web Apps.</p>
               <div className="socials">
                 <a
                   className="icon-linkedin"
@@ -64,6 +64,14 @@ export const Header = (props) => {
                 >
                   <i className="fab fa-angellist fa-lg"></i>
                 </a>
+                <a
+                  className="icon-gitlab"
+                  href="https://gitlab.com/sebastianmendo1995"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fa fa-gitlab fa-lg"></i>
+                </a>
               </div>
             </div>
             <div className="hero-img">
@@ -74,15 +82,15 @@ export const Header = (props) => {
             <p>Tech Stacks</p>
             <div className="logos">
               <ul>
-                <li><img src={react} title="HTML5" alt="skill-icon" /></li>
-                <li><img src={node} title="CSS3" alt="skill-icon" /></li>
-                <li><img src={rails} title="Java Script" alt="skill-icon" /></li>
-                <li><img src={tailwind} title="React" alt="skill-icon" /></li>
-                <li><img src={firebase} title="Tailwind CSS" alt="skill-icon" /></li>
-                <li><img src={next} title="SCSS" alt="skill-icon" /></li>
-                <li><img src={cloud} title="SCSS" alt="skill-icon" /></li>
-                <li><img src={html} title="SCSS" alt="skill-icon" /></li>
-                <li><img src={css} title="SCSS" alt="skill-icon" /></li>
+                <li><img src={react} title="React" alt="skill-icon" /></li>
+                <li><img src={node} title="Node.js" alt="skill-icon" /></li>
+                <li><img src={rails} title="Ruby Rails" alt="skill-icon" /></li>
+                <li><img src={tailwind} title="Tailwind CSS"  alt="skill-icon" /></li>
+                <li><img src={firebase} title="Firebase" alt="skill-icon" /></li>
+                <li><img src={next} title="Next.js" alt="skill-icon" /></li>
+                <li><img src={cloud} title="GCloud" alt="skill-icon" /></li>
+                <li><img src={html} title="HTML5" alt="skill-icon" /></li>
+                <li><img src={css} title="CSS" alt="skill-icon" /></li>
               </ul>
             </div>
           </div>
