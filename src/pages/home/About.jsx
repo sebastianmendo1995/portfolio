@@ -2,7 +2,7 @@ import React from "reactn";
 import styled from "styled-components";
 import { mediaQuery } from "../../styles/constants";
 import resume from "../../assets/documents/resume.pdf";
-import setup from "../../assets/images/setup/setup-dark.jpeg";
+import setup from "../../assets/images/setup/hero_setup.jpg";
 
 export const About = () => {
 
@@ -23,11 +23,11 @@ export const About = () => {
         <div className="about-content">
           <CustomDiv className="img-side" src={setup}></CustomDiv>
           <div className="text-side">
-            <h3>About me</h3>
+            <h3>About Me</h3>
             <p>
-              With 3 years experiences as a Software Engineer, I possess an impressive arsenal of skills different technologies as JavaScript, React, Node.js, Rails, Firebase, Google Cloud, Tailwindcss, CSS, HTML. I've successful create responsive websites that were built with best practices and a smooth user experience. My expertise lies in crafting dynamic, engaging interfaces through writing clean and optimized code, utilizing cutting-edge development tools and techniques. I am also a team player who thrives in collaborating with cross-functional teams to produce outstanding web applications.
+              I am a mid-level Software Engineer with a proven track record of creating responsive websites that adhere to best practices and provide a seamless user experience. I have experience in developing Chrome extensions and automating processes. I have led the architecture, design, and development of over 100 new features across various applications and have performed API integrations for payment services.
             </p>
-            <button className="submit" onClick={e => { downloadResume(e)}}>
+            <button className="submit" onClick={e => { downloadResume(e) }}>
               <span className="text">Download Resume</span>
             </button>
           </div>
@@ -93,7 +93,8 @@ const SectionAbout = styled.section`
         line-height: 1.5;
 
         ${mediaQuery.afterTablet}{
-          font-size: 1.5rem;
+          font-size: 1.3rem;
+          text-align: left;
         }
       }
       
