@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.bb328bfe.chunk.css",
-    "main.js": "/static/js/main.5f63b3fb.chunk.js",
+    "main.js": "/static/js/main.a551fbd0.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.6e1eeb75.js",
     "static/css/2.120b1219.chunk.css": "/static/css/2.120b1219.chunk.css",
-    "static/js/2.7a03042c.chunk.js": "/static/js/2.7a03042c.chunk.js",
+    "static/js/2.23ecade3.chunk.js": "/static/js/2.23ecade3.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.7a03042c.chunk.js.LICENSE.txt": "/static/js/2.7a03042c.chunk.js.LICENSE.txt",
+    "static/js/2.23ecade3.chunk.js.LICENSE.txt": "/static/js/2.23ecade3.chunk.js.LICENSE.txt",
     "static/media/basketball.915847c8.png": "/static/media/basketball.915847c8.png",
     "static/media/cloud.e929444a.svg": "/static/media/cloud.e929444a.svg",
     "static/media/css.4e47c312.svg": "/static/media/css.4e47c312.svg",
@@ -25,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.6e1eeb75.js",
     "static/css/2.120b1219.chunk.css",
-    "static/js/2.7a03042c.chunk.js",
+    "static/js/2.23ecade3.chunk.js",
     "static/css/main.bb328bfe.chunk.css",
-    "static/js/main.5f63b3fb.chunk.js"
+    "static/js/main.a551fbd0.chunk.js"
   ]
 }
