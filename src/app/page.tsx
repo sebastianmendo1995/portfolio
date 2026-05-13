@@ -1,0 +1,19 @@
+import { Hero }       from '@/components/sections/Hero'
+import { Experience } from '@/components/sections/Experience'
+import { Projects }   from '@/components/sections/Projects'
+import { Stack }      from '@/components/sections/Stack'
+import { About }      from '@/components/sections/About'
+import { Contact }    from '@/components/sections/Contact'
+
+export default function Home() {
+  return (
+    <main className="min-h-screen">
+      <Hero />
+      <Experience />
+      <Projects />
+      <Stack />
+      <About />
+      <Contact />
+    </main>
+  )
+}
