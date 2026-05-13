@@ -5,18 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Sebastian Mendo Lopez — Senior Software Engineer</title>
 <style>
-  /* ── RESET & BASE ──────────────────────────────────────────── */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --navy:   #0D2137;
-    --blue:   #1D4ED8;
-    --steel:  #475569;
-    --muted:  #94A3B8;
-    --ink:    #1E293B;
-    --bg:     #FFFFFF;
-    --rule:   #E2E8F0;
-    --bullet-blue: #1D4ED8;
+    --navy:  #0D2137;
+    --blue:  #1D4ED8;
+    --steel: #475569;
+    --muted: #94A3B8;
+    --ink:   #1E293B;
   }
 
   html { font-size: 10.5pt; }
@@ -28,18 +24,14 @@
     line-height: 1.45;
   }
 
-  /* ── PAGE SHELL ────────────────────────────────────────────── */
   .page {
     width: 8.5in;
     min-height: 11in;
     margin: 0.5in auto;
-    background: var(--bg);
+    background: #fff;
     box-shadow: 0 4px 40px rgba(0,0,0,0.14);
     padding: 0.62in 0.75in 0.65in;
   }
-
-  /* ── HEADER ────────────────────────────────────────────────── */
-  .header { margin-bottom: 0; }
 
   .name {
     font-size: 28pt;
@@ -57,9 +49,8 @@
     align-items: center;
     gap: 6px;
   }
-  .title-main  { font-weight: 700; color: var(--blue); }
-  .title-sep   { color: var(--muted); }
-  .title-sub   { color: var(--steel); }
+  .title-main { font-weight: 700; color: var(--blue); }
+  .title-sub  { color: var(--steel); }
 
   .contact-line {
     font-size: 9.2pt;
@@ -70,22 +61,12 @@
     gap: 0 4px;
     margin-bottom: 12px;
   }
-  .contact-line a {
-    color: var(--blue);
-    text-decoration: none;
-  }
+  .contact-line a { color: var(--blue); text-decoration: none; }
   .contact-line a:hover { text-decoration: underline; }
   .dot { color: var(--muted); margin: 0 3px; }
 
-  /* Thick rule under header */
-  .header-rule {
-    height: 3px;
-    background: var(--navy);
-    margin-bottom: 0;
-    border: none;
-  }
+  .header-rule { height: 3px; background: var(--navy); margin-bottom: 0; border: none; }
 
-  /* ── SECTIONS ──────────────────────────────────────────────── */
   .section { margin-top: 18px; }
 
   .section-title {
@@ -99,37 +80,12 @@
     margin-bottom: 10px;
   }
 
-  /* ── SUMMARY ───────────────────────────────────────────────── */
-  .summary p {
-    font-size: 9.8pt;
-    color: var(--ink);
-    line-height: 1.55;
-  }
+  .summary p { font-size: 9.8pt; color: var(--ink); line-height: 1.55; }
 
-  /* ── SKILLS ────────────────────────────────────────────────── */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3px 32px;
-  }
-  .skill-row {
-    display: flex;
-    align-items: baseline;
-    gap: 4px;
-    font-size: 9.5pt;
-    padding: 2px 0;
-  }
-  .skill-label {
-    font-weight: 700;
-    color: var(--navy);
-    white-space: nowrap;
-    min-width: 110px;
-    flex-shrink: 0;
-  }
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 32px; }
+  .skill-row { display: flex; align-items: baseline; gap: 4px; font-size: 9.5pt; padding: 2px 0; }
+  .skill-label { font-weight: 700; color: var(--navy); white-space: nowrap; min-width: 110px; flex-shrink: 0; }
   .skill-value { color: var(--ink); }
-
-  /* ── EXPERIENCE ────────────────────────────────────────────── */
-  .job { margin-bottom: 4px; }
 
   .job-header {
     display: flex;
@@ -138,23 +94,12 @@
     margin-top: 14px;
     margin-bottom: 1px;
   }
-  .job-left {
-    display: flex;
-    align-items: baseline;
-    gap: 5px;
-    flex-wrap: wrap;
-  }
+  .job-left { display: flex; align-items: baseline; gap: 5px; flex-wrap: wrap; }
   .job-role    { font-weight: 700; color: var(--ink); font-size: 10.5pt; }
   .job-dash    { color: var(--muted); font-size: 10pt; }
   .job-company { font-weight: 700; color: var(--blue); font-size: 10.5pt; }
   .job-date    { font-size: 9pt; color: var(--steel); font-style: italic; white-space: nowrap; }
-
-  .job-meta {
-    font-size: 8.8pt;
-    color: var(--muted);
-    font-style: italic;
-    margin-bottom: 6px;
-  }
+  .job-meta    { font-size: 8.8pt; color: var(--muted); font-style: italic; margin-bottom: 6px; }
 
   .bullets { list-style: none; padding: 0; margin: 0; }
   .bullets li {
@@ -169,65 +114,39 @@
     content: "•";
     position: absolute;
     left: 0;
-    top: 0;
     color: var(--blue);
     font-size: 10pt;
     line-height: 1.5;
   }
   .bullets li b { color: var(--ink); font-weight: 600; }
 
-  /* ── EDUCATION ─────────────────────────────────────────────── */
-  .edu-entry {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-top: 10px;
-  }
-  .edu-left {}
+  .edu-entry { display: flex; justify-content: space-between; align-items: baseline; margin-top: 10px; }
   .edu-school { font-weight: 700; color: var(--ink); font-size: 10pt; }
   .edu-degree { color: var(--steel); font-size: 9.5pt; }
   .edu-meta   { font-size: 8.5pt; color: var(--muted); font-style: italic; margin-top: 1px; }
   .edu-date   { font-size: 9pt; color: var(--steel); font-style: italic; white-space: nowrap; }
 
-  /* ── PRINT STYLES ──────────────────────────────────────────── */
   @media print {
     body  { background: white; }
-    .page {
-      width: 100%;
-      margin: 0;
-      padding: 0.55in 0.7in 0.6in;
-      box-shadow: none;
-    }
+    .page { width: 100%; margin: 0; padding: 0.55in 0.7in 0.6in; box-shadow: none; }
     a { color: var(--blue) !important; }
     @page { size: letter; margin: 0; }
   }
 
-  /* ── SCREEN ONLY PRINT BUTTON ─────────────────────────────── */
-  .print-btn {
-    display: block;
-    text-align: center;
-    margin: 14px auto 0;
-    font-size: 9pt;
-    color: var(--muted);
-    font-family: inherit;
-  }
+  .print-btn { display: block; text-align: center; margin: 14px auto 0; font-size: 9pt; color: var(--muted); font-family: inherit; }
   @media print { .print-btn { display: none; } }
 </style>
 </head>
 <body>
-
 <div class="page">
 
-  <!-- ══ HEADER ══════════════════════════════════════════ -->
-  <header class="header">
+  <header>
     <div class="name">SEBASTIAN MENDO LOPEZ</div>
-
     <div class="title-line">
       <span class="title-main">Senior Software Engineer</span>
-      <span class="title-sep">·</span>
+      <span class="dot">·</span>
       <span class="title-sub">Full Stack &amp; Automation Specialist</span>
     </div>
-
     <div class="contact-line">
       <span>Peru · Open to US Remote</span>
       <span class="dot">·</span>
@@ -243,70 +162,32 @@
       <span class="dot">·</span>
       <a href="https://linkedin.com/in/sebastian-mendo-lopez-8730b1126/" target="_blank">LinkedIn</a>
     </div>
-
     <hr class="header-rule" />
   </header>
 
-  <!-- ══ PROFESSIONAL SUMMARY ════════════════════════════ -->
   <section class="section summary">
     <div class="section-title">Professional Summary</div>
-    <p>
-      Senior Software Engineer with 5+ years of experience building production-grade automation systems,
-      scalable web applications, and SaaS products. Specializes in browser automation architecture
-      (Playwright, Puppeteer), modern React/Next.js frontends, and full-stack TypeScript engineering.
-      At iVisa, reduced manual operations workload by <strong>60%+</strong> through enterprise-scale automation
-      serving thousands of global visa applicants. Independently architected and shipped SeguiPro — a
-      production CRM SaaS platform — owning the full stack from data model to deployment. Leverages
-      AI-assisted development workflows to accelerate engineering velocity and prototype faster. Known for
-      deep technical ownership, autonomous execution, and delivering measurable business impact.
-    </p>
+    <p>Senior Software Engineer with 5+ years of experience building production-grade automation systems, scalable web applications, and SaaS products. Specializes in browser automation architecture (Playwright, Puppeteer), modern React/Next.js frontends, and full-stack TypeScript engineering. At iVisa, reduced manual operations workload by <strong>60%+</strong> through enterprise-scale automation serving thousands of global visa applicants. Independently architected and shipped SeguiPro — a production CRM SaaS platform — owning the full stack from data model to deployment. Leverages AI-assisted development workflows to accelerate engineering velocity and prototype faster. Known for deep technical ownership, autonomous execution, and delivering measurable business impact.</p>
   </section>
 
-  <!-- ══ TECHNICAL SKILLS ═════════════════════════════════ -->
   <section class="section">
     <div class="section-title">Technical Skills</div>
     <div class="skills-grid">
-      <div class="skill-row">
-        <span class="skill-label">Languages:</span>
-        <span class="skill-value">TypeScript, JavaScript (ES6+)</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">Automation:</span>
-        <span class="skill-value">Playwright, Puppeteer, Browser Automation, Chrome Extensions, Web Scraping</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">Frontend:</span>
-        <span class="skill-value">React, Next.js 14, Tailwind CSS, HTML5, CSS3</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">Data &amp; Storage:</span>
-        <span class="skill-value">Firestore (NoSQL), MongoDB, SQL, PostgreSQL</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">Backend:</span>
-        <span class="skill-value">Node.js, Express, REST APIs, Firebase (Firestore · Auth · Functions)</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">DevOps &amp; Cloud:</span>
-        <span class="skill-value">Git, Vercel, CI/CD Pipelines, Webpack</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">Payments &amp; SaaS:</span>
-        <span class="skill-value">Stripe, OAuth 2.0, Multi-tenant Architecture, SaaS Subscriptions</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">AI &amp; Workflow:</span>
-        <span class="skill-value">AI-assisted development (Claude, GitHub Copilot), Rapid Prototyping</span>
-      </div>
+      <div class="skill-row"><span class="skill-label">Languages:</span><span class="skill-value">TypeScript, JavaScript (ES6+)</span></div>
+      <div class="skill-row"><span class="skill-label">Automation:</span><span class="skill-value">Playwright, Puppeteer, Browser Automation, Chrome Extensions, Web Scraping</span></div>
+      <div class="skill-row"><span class="skill-label">Frontend:</span><span class="skill-value">React, Next.js 14, Tailwind CSS, HTML5, CSS3</span></div>
+      <div class="skill-row"><span class="skill-label">Data &amp; Storage:</span><span class="skill-value">Firestore (NoSQL), MongoDB, SQL, PostgreSQL</span></div>
+      <div class="skill-row"><span class="skill-label">Backend:</span><span class="skill-value">Node.js, Express, REST APIs, Firebase (Firestore · Auth · Functions)</span></div>
+      <div class="skill-row"><span class="skill-label">DevOps &amp; Cloud:</span><span class="skill-value">Git, Vercel, CI/CD Pipelines, Webpack</span></div>
+      <div class="skill-row"><span class="skill-label">Payments &amp; SaaS:</span><span class="skill-value">Stripe, OAuth 2.0, Multi-tenant Architecture, SaaS Subscriptions</span></div>
+      <div class="skill-row"><span class="skill-label">AI &amp; Workflow:</span><span class="skill-value">AI-assisted development (Claude, GitHub Copilot), Rapid Prototyping</span></div>
     </div>
   </section>
 
-  <!-- ══ PROFESSIONAL EXPERIENCE ══════════════════════════ -->
   <section class="section">
     <div class="section-title">Professional Experience</div>
 
-    <!-- iVisa -->
-    <div class="job">
+    <div>
       <div class="job-header">
         <div class="job-left">
           <span class="job-role">Senior Software Engineer</span>
@@ -325,8 +206,7 @@
       </ul>
     </div>
 
-    <!-- SeguiPro -->
-    <div class="job">
+    <div>
       <div class="job-header">
         <div class="job-left">
           <span class="job-role">Founder &amp; Full Stack Engineer</span>
@@ -345,8 +225,7 @@
       </ul>
     </div>
 
-    <!-- Bombo -->
-    <div class="job">
+    <div>
       <div class="job-header">
         <div class="job-left">
           <span class="job-role">Software Engineer</span>
@@ -365,20 +244,17 @@
     </div>
   </section>
 
-  <!-- ══ EDUCATION ════════════════════════════════════════ -->
   <section class="section">
     <div class="section-title">Education</div>
-
     <div class="edu-entry">
-      <div class="edu-left">
+      <div>
         <div><span class="edu-school">App Academy</span>&ensp;<span class="edu-degree">— Fullstack Software Engineering</span></div>
         <div class="edu-meta">San Francisco, CA</div>
       </div>
       <span class="edu-date">2019</span>
     </div>
-
     <div class="edu-entry">
-      <div class="edu-left">
+      <div>
         <div><span class="edu-school">University of Piura</span>&ensp;<span class="edu-degree">— B.S. Industrial &amp; Systems Engineering</span></div>
         <div class="edu-meta">Piura, Peru</div>
       </div>
@@ -386,9 +262,7 @@
     </div>
   </section>
 
-</div><!-- /page -->
-
+</div>
 <p class="print-btn">💡 To export as PDF: File → Print → Save as PDF &nbsp;|&nbsp; Use "Letter" paper, no margins</p>
-
 </body>
 </html>
