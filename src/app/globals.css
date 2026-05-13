@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── ROOT ──────────────────────────────────────────────────────────────────── */
+:root {
+  --background:  #09090b;
+  --foreground:  #fafafa;
+  --card:        #18181b;
+  --border:      #27272a;
+  --muted:       #71717a;
+  --accent:      #3b82f6;
+}
+
+/* ── BASE ──────────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── SELECTION ─────────────────────────────────────────────────────────────── */
+::selection {
+  background: #3b82f640;
+  color: #fafafa;
+}
+
+/* ── SCROLLBAR ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* ── FOCUS ─────────────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* ── UTILITIES ─────────────────────────────────────────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-6 md:px-8;
+  }
+  .section-label {
+    @apply text-xs font-semibold tracking-widest text-zinc-500 uppercase;
+  }
+  .section-heading {
+    @apply text-2xl md:text-3xl font-semibold text-zinc-50 tracking-tight;
+  }
+  .card-base {
+    @apply bg-zinc-900 border border-zinc-800 rounded-2xl;
+  }
+  .link-hover {
+    @apply transition-colors duration-150 hover:text-zinc-50;
+  }
+}
