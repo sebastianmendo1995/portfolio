@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sebastian Mendo Lopez — Senior Software Engineer</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:  #0D2137;
+    --blue:  #1D4ED8;
+    --steel: #475569;
+    --muted: #94A3B8;
+    --ink:   #1E293B;
+  }
+
+  html { font-size: 10.5pt; }
+
+  body {
+    font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+    color: var(--ink);
+    background: #F1F5F9;
+    line-height: 1.45;
+  }
+
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 0.5in auto;
+    background: #fff;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.14);
+    padding: 0.62in 0.75in 0.65in;
+  }
+
+  .name {
+    font-size: 28pt;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+
+  .title-line {
+    font-size: 12pt;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .title-main { font-weight: 700; color: var(--blue); }
+  .title-sub  { color: var(--steel); }
+
+  .contact-line {
+    font-size: 9.2pt;
+    color: var(--steel);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 4px;
+    margin-bottom: 12px;
+  }
+  .contact-line a { color: var(--blue); text-decoration: none; }
+  .contact-line a:hover { text-decoration: underline; }
+  .dot { color: var(--muted); margin: 0 3px; }
+
+  .header-rule { height: 3px; background: var(--navy); margin-bottom: 0; border: none; }
+
+  .section { margin-top: 18px; }
+
+  .section-title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding-bottom: 5px;
+    border-bottom: 2.5px solid var(--blue);
+    margin-bottom: 10px;
+  }
+
+  .summary p { font-size: 9.8pt; color: var(--ink); line-height: 1.55; }
+
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 32px; }
+  .skill-row { display: flex; align-items: baseline; gap: 4px; font-size: 9.5pt; padding: 2px 0; }
+  .skill-label { font-weight: 700; color: var(--navy); white-space: nowrap; min-width: 110px; flex-shrink: 0; }
+  .skill-value { color: var(--ink); }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 14px;
+    margin-bottom: 1px;
+  }
+  .job-left { display: flex; align-items: baseline; gap: 5px; flex-wrap: wrap; }
+  .job-role    { font-weight: 700; color: var(--ink); font-size: 10.5pt; }
+  .job-dash    { color: var(--muted); font-size: 10pt; }
+  .job-company { font-weight: 700; color: var(--blue); font-size: 10.5pt; }
+  .job-date    { font-size: 9pt; color: var(--steel); font-style: italic; white-space: nowrap; }
+  .job-meta    { font-size: 8.8pt; color: var(--muted); font-style: italic; margin-bottom: 6px; }
+
+  .bullets { list-style: none; padding: 0; margin: 0; }
+  .bullets li {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 4px;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  .bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+  .bullets li b { color: var(--ink); font-weight: 600; }
+
+  .edu-entry { display: flex; justify-content: space-between; align-items: baseline; margin-top: 10px; }
+  .edu-school { font-weight: 700; color: var(--ink); font-size: 10pt; }
+  .edu-degree { color: var(--steel); font-size: 9.5pt; }
+  .edu-meta   { font-size: 8.5pt; color: var(--muted); font-style: italic; margin-top: 1px; }
+  .edu-date   { font-size: 9pt; color: var(--steel); font-style: italic; white-space: nowrap; }
+
+  @media print {
+    body  { background: white; }
+    .page { width: 100%; margin: 0; padding: 0.55in 0.7in 0.6in; box-shadow: none; }
+    a { color: var(--blue) !important; }
+    @page { size: letter; margin: 0; }
+  }
+
+  .print-btn { display: block; text-align: center; margin: 14px auto 0; font-size: 9pt; color: var(--muted); font-family: inherit; }
+  @media print { .print-btn { display: none; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="name">SEBASTIAN MENDO LOPEZ</div>
+    <div class="title-line">
+      <span class="title-main">Senior Software Engineer</span>
+      <span class="dot">·</span>
+      <span class="title-sub">Full Stack &amp; Automation Specialist</span>
+    </div>
+    <div class="contact-line">
+      <span>Peru · Open to US Remote</span>
+      <span class="dot">·</span>
+      <span>+51 984 381 904</span>
+      <span class="dot">·</span>
+      <a href="mailto:sebastian.mendo1995@gmail.com">sebastian.mendo1995@gmail.com</a>
+      <span class="dot">·</span>
+      <a href="https://sebastianmendo.com" target="_blank">sebastianmendo.com</a>
+      <span class="dot">·</span>
+      <a href="https://seguipro.com" target="_blank">seguipro.com</a>
+      <span class="dot">·</span>
+      <a href="https://github.com/sebastianmendo1995" target="_blank">GitHub</a>
+      <span class="dot">·</span>
+      <a href="https://linkedin.com/in/sebastian-mendo-lopez-8730b1126/" target="_blank">LinkedIn</a>
+    </div>
+    <hr class="header-rule" />
+  </header>
+
+  <section class="section summary">
+    <div class="section-title">Professional Summary</div>
+    <p>Senior Software Engineer with 5+ years of experience building production-grade automation systems, scalable web applications, and SaaS products. Specializes in browser automation architecture (Playwright, Puppeteer), modern React/Next.js frontends, and full-stack TypeScript engineering. At iVisa, reduced manual operations workload by <strong>60%+</strong> through enterprise-scale automation serving thousands of global visa applicants. Independently architected and shipped SeguiPro — a production CRM SaaS platform — owning the full stack from data model to deployment. Leverages AI-assisted development workflows to accelerate engineering velocity and prototype faster. Known for deep technical ownership, autonomous execution, and delivering measurable business impact.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="skill-label">Languages:</span><span class="skill-value">TypeScript, JavaScript (ES6+)</span></div>
+      <div class="skill-row"><span class="skill-label">Automation:</span><span class="skill-value">Playwright, Puppeteer, Browser Automation, Chrome Extensions, Web Scraping</span></div>
+      <div class="skill-row"><span class="skill-label">Frontend:</span><span class="skill-value">React, Next.js 14, Tailwind CSS, HTML5, CSS3</span></div>
+      <div class="skill-row"><span class="skill-label">Data &amp; Storage:</span><span class="skill-value">Firestore (NoSQL), MongoDB, SQL, PostgreSQL</span></div>
+      <div class="skill-row"><span class="skill-label">Backend:</span><span class="skill-value">Node.js, Express, REST APIs, Firebase (Firestore · Auth · Functions)</span></div>
+      <div class="skill-row"><span class="skill-label">DevOps &amp; Cloud:</span><span class="skill-value">Git, Vercel, CI/CD Pipelines, Webpack</span></div>
+      <div class="skill-row"><span class="skill-label">Payments &amp; SaaS:</span><span class="skill-value">Stripe, OAuth 2.0, Multi-tenant Architecture, SaaS Subscriptions</span></div>
+      <div class="skill-row"><span class="skill-label">AI &amp; Workflow:</span><span class="skill-value">AI-assisted development (Claude, GitHub Copilot), Rapid Prototyping</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Professional Experience</div>
+
+    <div>
+      <div class="job-header">
+        <div class="job-left">
+          <span class="job-role">Senior Software Engineer</span>
+          <span class="job-dash">—</span>
+          <span class="job-company">iVisa</span>
+        </div>
+        <span class="job-date">2022 – Present</span>
+      </div>
+      <div class="job-meta">Remote &nbsp;·&nbsp; Travel-Tech SaaS &nbsp;·&nbsp; Series B &nbsp;·&nbsp; Visa processing at global scale</div>
+      <ul class="bullets">
+        <li>Architected a fleet of production automation bots using <b>Playwright</b> and <b>Puppeteer</b>, processing government visa form submissions at scale — reducing manual operations workload by <b>60%+</b> and eliminating thousands of hours of repetitive processing annually.</li>
+        <li>Owned the full product lifecycle of an internal <b>Chrome Extension</b> used daily by operations teams: designed the architecture, shipped <b>30+ production features</b>, and maintained secure REST API bridges to the core platform.</li>
+        <li>Reverse-engineered and modernized a legacy automation pipeline — improving reliability, observability, and long-term maintainability — eliminating recurring production failures that previously required manual intervention.</li>
+        <li>Designed and implemented high-throughput <b>REST API integrations</b> between the core platform and browser automation layer, enabling real-time data flows for mission-critical, high-volume visa processing workflows.</li>
+        <li>Partnered cross-functionally with product, operations, and engineering to translate complex business workflows into scalable automated systems, directly reducing operational overhead and increasing team throughput.</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="job-header">
+        <div class="job-left">
+          <span class="job-role">Founder &amp; Full Stack Engineer</span>
+          <span class="job-dash">—</span>
+          <span class="job-company">SeguiPro</span>
+        </div>
+        <span class="job-date">2023 – Present</span>
+      </div>
+      <div class="job-meta">seguipro.com &nbsp;·&nbsp; Independent SaaS &nbsp;·&nbsp; CRM platform purpose-built for sales teams</div>
+      <ul class="bullets">
+        <li>Sole architect and engineer of SeguiPro — designed and shipped an entire production CRM SaaS platform from zero, including <b>multi-tenant architecture</b>, authentication, real-time data sync, and Stripe payment infrastructure.</li>
+        <li>Built the full stack using <b>Next.js 14</b>, <b>TypeScript</b>, <b>Firebase (Firestore + Auth)</b>, and <b>Tailwind CSS</b>, deployed on Vercel with automated CI/CD pipelines and environment-specific configuration.</li>
+        <li>Integrated <b>Stripe</b> subscription infrastructure supporting recurring billing, plan upgrades, and full customer lifecycle management — establishing a production-ready revenue model from day one.</li>
+        <li>Designed a scalable <b>Firestore multi-tenant data model</b> supporting isolated, per-team workspaces with real-time synchronization — architected for production scale, not MVP shortcuts.</li>
+        <li>Drove all product decisions — UX design, feature prioritization, authentication flows, onboarding, and deployment — demonstrating end-to-end ownership of both engineering and product strategy.</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="job-header">
+        <div class="job-left">
+          <span class="job-role">Software Engineer</span>
+          <span class="job-dash">—</span>
+          <span class="job-company">Bombo Peru S.A.C.</span>
+        </div>
+        <span class="job-date">2020 – 2022</span>
+      </div>
+      <div class="job-meta">Lima, Peru &nbsp;·&nbsp; Digital product agency &nbsp;·&nbsp; Multi-client production web applications</div>
+      <ul class="bullets">
+        <li>Spearheaded architecture and delivery of <b>40+ features</b> across multiple production web applications, consistently executing on tight startup timelines.</li>
+        <li>Built type-safe, reusable component libraries in <b>React + TypeScript</b> that reduced frontend development time and improved engineering consistency across client projects.</li>
+        <li>Engineered third-party <b>payment API integrations</b> ensuring transaction reliability, security standards, and PCI-compliant data handling across production environments.</li>
+        <li>Developed backend <b>REST APIs</b> using Node.js and Express supporting internal tooling and client-facing product features across the full stack.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-entry">
+      <div>
+        <div><span class="edu-school">App Academy</span>&ensp;<span class="edu-degree">— Fullstack Software Engineering</span></div>
+        <div class="edu-meta">San Francisco, CA</div>
+      </div>
+      <span class="edu-date">2019</span>
+    </div>
+    <div class="edu-entry">
+      <div>
+        <div><span class="edu-school">University of Piura</span>&ensp;<span class="edu-degree">— B.S. Industrial &amp; Systems Engineering</span></div>
+        <div class="edu-meta">Piura, Peru</div>
+      </div>
+      <span class="edu-date">2013 – 2018</span>
+    </div>
+  </section>
+
+</div>
+<p class="print-btn">💡 To export as PDF: File → Print → Save as PDF &nbsp;|&nbsp; Use "Letter" paper, no margins</p>
+</body>
+</html>
